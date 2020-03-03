@@ -1,0 +1,114 @@
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h5, span, a, button, div {
+    font-size: 20px;
+}
+
+* {
+    color: #707070;
+}
+
+h1 {
+    color: #202020;
+}
+
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+/*Box*/
+
+.box-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: #FEFEFE;
+    border-radius: 20px;
+    border: 1px solid #707070;
+    padding: 10px;
+}
+
+/*/box*/
+
+/*Title*/
+
+
+.title {
+    text-align: center;
+}
+
+.fat {
+    font-weight: bold;
+}
+
+.thin {
+    font-weight: 400;
+}
+
+.title span {
+    font-size: 40px;
+}
+
+.title h1 {
+    margin-bottom: 0px;
+}
+
+.sub-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*/title*/
+
+/*Button*/
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 5px 15px;
+    background-color: #6EDC38;
+    border: 0px solid black;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+button a {
+    color: #FEFEFE;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #61c331;
+}
+
+button a:hover {
+    color: #FEFEFE;
+    text-decoration: none;
+}
+
+
+/*button*/
+
