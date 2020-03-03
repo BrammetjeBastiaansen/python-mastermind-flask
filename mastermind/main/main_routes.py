@@ -8,3 +8,5 @@ main_bp = Blueprint('main_bp', __name__,
 @main_bp.route('/', methods=["GET"])
 def index():
     return render_template("startscreen.html")
+
+@main_bp.add_url_rule("/",)
