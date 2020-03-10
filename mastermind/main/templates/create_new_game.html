@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='main/css/startscreen.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block box_content %}
+
+    <div class="box-content">
+        <form action="{{ url_for('main_bp.create') }}" method="POST">
+            <div class="input-container input-spacer">
+                <label>Nickname</label>
+                <input type="text" name="playerName" placeholder="Enter nickname..." />
+            </div>
+            <div class="button-container">
+                    <button type="submit">
+                        <a>Enter Mastermind</a>
+                    </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
