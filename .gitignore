@@ -3,6 +3,7 @@ flask-project/
 __pycache__/
 /flask-project/
 /mastermind/instance/
+flask-project
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

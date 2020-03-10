@@ -1,4 +1,4 @@
-from app import db
+from mastermind.app import db
 from datetime import datetime
 
 

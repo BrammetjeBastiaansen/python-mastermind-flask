@@ -1,0 +1,8 @@
+.input-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.box-content {
+    padding-top: 25px;
+}
