@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/flask-project" />
+      <excludeFolder url="file://$MODULE_DIR$/mastermind/instance" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -14,7 +15,8 @@
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/mastermind/main/templates" />
+        <option value="$MODULE_DIR$/mastermind/templates" />
       </list>
     </option>
   </component>
