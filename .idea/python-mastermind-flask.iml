@@ -15,7 +15,8 @@
   <component name="TemplatesService">
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/mastermind/main/templates" />
+        <option value="$MODULE_DIR$/mastermind/templates" />
       </list>
     </option>
   </component>

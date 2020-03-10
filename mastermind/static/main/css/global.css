@@ -19,6 +19,20 @@ h1 {
     color: #202020;
 }
 
+.overlay {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.30);
+    color: white;
+}
+
+.z-index-999 {
+    z-index: 999;
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -94,7 +108,7 @@ button {
 }
 
 button a {
-    color: #FEFEFE;
+    color: #FEFEFE !important;
     font-weight: bold;
 }
 
