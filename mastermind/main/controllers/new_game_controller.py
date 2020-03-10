@@ -1,4 +1,4 @@
-from flask import request, redirect, render_template
+from flask import request, redirect, render_template, url_for
 from flask.views import MethodView
 
 
@@ -9,3 +9,7 @@ class New_Game_Controller(MethodView):
 
     def get(self):
         return render_template("create_new_game.html")
+
+    def post(self):
+        pass
+        # return redirect(url_for("main_bp.new_game_create"))
