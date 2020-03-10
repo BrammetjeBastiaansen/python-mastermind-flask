@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='main/css/usersoverview.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block box_content %}
+    <h3 class="text-center mb-4">All players</h3>
+
+    <table class="mb-5">
+        <thead>
+            <tr>
+                <th colspan="2">Nickname</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cees Melis</td>
+                <td><button class="green-btn">Statistics</button></td>
+            </tr>
+            <tr>
+                <td>Bram Bastiaansen</td>
+                <td><button class="green-btn">Statistics</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-right">
+        <button class="green-btn">Create new game</button>
+    </div>
+{% endblock %}

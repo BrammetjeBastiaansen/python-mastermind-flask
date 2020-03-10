@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='main/css/useroverview.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block box_content %}
+    <h3 class="text-center mb-4">Statistics - Cees Melis</h3>
+
+    <h3>Gespeeld op</h3>
+    <table class="mb-4">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Aantal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>03-03-2020</td>
+                <td>3 keer</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Games played</h3>
+    <table class="mb-5">
+        <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>Datum</th>
+                <th>Pogingen</th>
+                <th>Cheatmode</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#1</td>
+                <td>03-03-2020</td>
+                <td>1 poging</td>
+                <td>Not active</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-right">
+        <button class="green-btn">Create a new game</button>
+    </div>
+{% endblock %}
