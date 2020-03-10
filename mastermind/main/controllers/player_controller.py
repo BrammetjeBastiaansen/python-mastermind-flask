@@ -1,11 +1,10 @@
 from flask import request, redirect, render_template
 from flask.views import MethodView
-from mastermind.main.models.player_model import Player_Model
 
 
 class Player_Controller(MethodView):
-    def __init__(self):
-        self._player_model = Player_Model()
+    def __init__(self, model):
+        self._player_model = model
 
     def get(self):
         return render_template("startscreen.html")
