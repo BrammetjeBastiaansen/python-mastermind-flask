@@ -110,29 +110,3 @@ button a:hover {
 }
 
 /*button*/
-
-table {
-  border-collapse: separate;
-  border-spacing: 50px 5px;
-}
-
-th {
-    border-bottom: 1px solid #707070;
-    padding-bottom: 5px;
-}
-
-tr {
-    margin-top: 50px;
-}
-
-td {
-    color: #E8E800;
-    font-weight: bold;
-    font-size: 1.3em;
-}
-
-.green-btn {
-    background-color: #6EDC38;
-    color: white;
-    padding: 4px 25px;
-}

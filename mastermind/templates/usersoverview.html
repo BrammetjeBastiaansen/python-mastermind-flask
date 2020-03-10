@@ -1,47 +1,31 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <title>Mastermind</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="../static/css/global.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="box-container">
-                <div class="box p-4">
-                  <div class="col-md-12 title mb-4">
-                     <h1><span class="fat">Master</span><span class="thin">mind</span></h1>
-                      <h5 class="sub-title">Made by: Cees Melis and Bram Bastiaansen</h5>
-                  </div>
-                    <div>
-                        <h3 class="text-center mb-4">All players</h3>
+{% extends "base.html" %}
 
-                        <table class="mb-5">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Nickname</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cees Melis</td>
-                                    <td><button class="green-btn">Statistics</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Bram Bastiaansen</td>
-                                    <td><button class="green-btn">Statistics</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='main/css/usersoverview.css') }}" rel="stylesheet" />
+{% endblock %}
 
-                        <div class="text-right">
-                            <button class="green-btn">Create new game</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+{% block box_content %}
+    <h3 class="text-center mb-4">All players</h3>
+
+    <table class="mb-5">
+        <thead>
+            <tr>
+                <th colspan="2">Nickname</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cees Melis</td>
+                <td><button class="green-btn">Statistics</button></td>
+            </tr>
+            <tr>
+                <td>Bram Bastiaansen</td>
+                <td><button class="green-btn">Statistics</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-right">
+        <button class="green-btn">Create new game</button>
     </div>
-</body>
-</html>
+{% endblock %}
