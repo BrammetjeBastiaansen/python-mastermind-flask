@@ -31,5 +31,8 @@ main_bp.add_url_rule("/", view_func=Player_Controller.as_view("create", player_m
 main_bp.add_url_rule("/new-game", view_func=New_Game_Controller.as_view("new_game", player_model, game_model), methods=["GET"])
 main_bp.add_url_rule("/new-game", view_func=New_Game_Controller.as_view("new_game_create", player_model, game_model), methods=["POST"])
 
+main_bp.add_url_rule("/game", view_func=New_Game_Controller.as_view("game", player_model, game_model), methods=["GET"])
+main_bp.add_url_rule("/game", view_func=New_Game_Controller.as_view("game_update", player_model, game_model), methods=["POST"])
+
 main_bp.add_url_rule("/users-overview", view_func=Usersoverview_Controller.as_view("users_overview"), methods=["GET"])
 main_bp.add_url_rule("/user-overview", view_func=Useroverview_Controller.as_view("user_overview"), methods=["GET"])
