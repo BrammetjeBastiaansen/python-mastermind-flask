@@ -3,8 +3,8 @@ from flask.views import MethodView
 
 
 class Player_Controller(MethodView):
-    def __init__(self, model):
-        self._player_model = model
+    def __init__(self, player_model):
+        self._player_model = player_model
 
     def get(self):
         return render_template("startscreen.html")
