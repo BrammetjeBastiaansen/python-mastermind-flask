@@ -11,5 +11,6 @@ class New_Game_Controller(MethodView):
         return render_template("create_new_game.html")
 
     def post(self):
-        pass
+        print(request.form)
         # return redirect(url_for("main_bp.new_game_create"))
+        pass
