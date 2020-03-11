@@ -12,15 +12,24 @@ main_bp = Blueprint('main_bp', __name__,
                     static_folder='static')
 
 # Models
+# We declare the models here and pass them to the our MethodView controller.
+# The reason for this is because there is no cleaner way to do this using MethodView.
+# It's still better then having a messy and un-maintainable router.
+
 player_model = Player_Model()
 game_model = Game_Model()
 
+
 # Routes
+# We use add_url_rule to declare routes instead of the @route decorator.
+# The reason for this is that we use MethodView for our controllers and
+# these do not support the route decorator.
+
 main_bp.add_url_rule("/", view_func=Player_Controller.as_view("index", player_model), methods=["GET"])
 main_bp.add_url_rule("/", view_func=Player_Controller.as_view("create", player_model), methods=["POST"])
 
 main_bp.add_url_rule("/new-game", view_func=New_Game_Controller.as_view("new_game", player_model, game_model), methods=["GET"])
 main_bp.add_url_rule("/new-game", view_func=New_Game_Controller.as_view("new_game_create", player_model, game_model), methods=["POST"])
 
-main_bp.add_url_rule("/usersoverview", view_func=Usersoverview_Controller.as_view("usersoverview"), methods=["GET"])
-main_bp.add_url_rule("/useroverview", view_func=Useroverview_Controller.as_view("useroverview"), methods=["GET"])
+main_bp.add_url_rule("/users-overview", view_func=Usersoverview_Controller.as_view("users_overview"), methods=["GET"])
+main_bp.add_url_rule("/user-overview", view_func=Useroverview_Controller.as_view("user_overview"), methods=["GET"])
