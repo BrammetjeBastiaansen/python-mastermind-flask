@@ -56,6 +56,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+.full-width {
+    width: 100%;
+}
+
 /*Box*/
 
 .box-container {

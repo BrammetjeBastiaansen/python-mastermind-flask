@@ -21,4 +21,4 @@ class New_Game_Controller(MethodView):
         self._game_model.create_new_game(self._player_model.get_current_player.id, double_color_allowed,
                                          cheat_mode_allowed, amount_of_colors, amount_of_pins)
 
-        return redirect(url_for("main_bp.new_game_create"))
+        return redirect(url_for("main_bp.game"))

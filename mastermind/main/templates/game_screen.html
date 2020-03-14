@@ -1,0 +1,35 @@
+{% extends "game.html" %}
+
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='main/css/game.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block side_bar %}
+
+    <div class="box-content">
+        <div class="border-container">
+            <div class="border-container-content">
+                <div class="border-container-title font-bold">
+                    Colors
+                </div>
+                <div class="colors">
+                    <div class="color"></div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button>
+                    <a>Apply Code</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block main %}
+
+    <div class="border-container-content full-width">
+        Gert
+    </div>
+
+{% endblock %}

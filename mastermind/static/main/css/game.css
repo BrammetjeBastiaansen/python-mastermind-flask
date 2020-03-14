@@ -1,0 +1,10 @@
+.border-container-content {
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #707070;
+    margin-bottom: 15px;
+}
+
+.border-container-title {
+    text-align: center;
+}

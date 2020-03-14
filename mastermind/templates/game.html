@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mastermind</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='main/css/global.css') }}" rel="stylesheet">
+    {% block stylesheet %}{% endblock %}
 </head>
 <body>
-
+    <div class="container">
+        <div class="overlay"></div>
+        <div class="row z-index-999">
+            <div class="box-container">
+                <div class="box input-inline">
+                    <div>
+                        <div class="col-md-12 title">
+                         <h1><span class="fat">Master</span><span class="thin">mind</span></h1>
+                          <h5 class="sub-title">Made by: Cees Melis and Bram Bastiaansen</h5>
+                        </div>
+                        <div>
+                            {% block side_bar %}{% endblock %}
+                        </div>
+                    </div>
+                    <div class="full-width">
+                            {% block main %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
