@@ -1,49 +1,64 @@
 {% extends "base.html" %}
 
 {% block stylesheet %}
-    <link href="{{ url_for('static', filename='main/css/user_overview.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='main/css/useroverview.css') }}" rel="stylesheet" />
 {% endblock %}
 
 {% block box_content %}
-    <h3 class="text-center mb-4">Statistics - Cees Melis</h3>
+    {% if player is not none %}
+        <h3 class="text-center mb-4">Statistics - {{ player.name }}</h3>
 
-    <h3>Gespeeld op</h3>
-    <table class="mb-4">
-        <thead>
-            <tr>
-                <th>Datum</th>
-                <th>Aantal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>03-03-2020</td>
-                <td>3 keer</td>
-            </tr>
-        </tbody>
-    </table>
+        {% if player.games %}
+            <h3>Gespeeld op</h3>
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Aantal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game_amount_by_date in game_amounts_by_date %}
+                        <tr>
+                            <td>{{ game_amount_by_date.date }}</td>
+                            <td>{{ game_amount_by_date.amount }} keer</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
-    <h3>Games played</h3>
-    <table class="mb-5">
-        <thead>
-            <tr>
-                <th>Ranking</th>
-                <th>Datum</th>
-                <th>Pogingen</th>
-                <th>Cheatmode</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>#1</td>
-                <td>03-03-2020</td>
-                <td>1 poging</td>
-                <td>Not active</td>
-            </tr>
-        </tbody>
-    </table>
+            <h3>Gespeelde potjes</h3>
+            <table class="mb-5">
+                <thead>
+                    <tr>
+                        <th>Ranking</th>
+                        <th>Datum</th>
+                        <th>Pogingen</th>
+                        <th>Cheatmode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game in player.games %}
+                        <tr>
+                            <td>#{{ game.id }}</td>
+                            <td>{{ game.played_on.date() }}</td>
+                            <td>{{ game.answers_guessed_in_turns }} {{ "poging" if game.answers_guessed_in_turns == 1 else "pogingen"}}</td>
+                            <td>{{ "Active" if game.cheats_used else "Not active"}}</td> <!-- TODO -->
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="text-center pb-3">{{ player.name }} heeft nog geen potjes gespeeld.</p>
+        {% endif %}
 
-    <div class="text-right">
-        <button class="green-btn">Create a new game</button>
-    </div>
+        <div class="text-right">
+            <a href="{{ url_for('main_bp.create') }}" class="green-btn">Create a new game</a>
+        </div>
+    {% else %}
+        <div class="text-center">
+            <h3 class="mt-4 mb-3">Could not find player</h3>
+            <a href="{{ url_for('main_bp.users_overview') }}" class="green-btn">Return to users</a>
+        </div>
+    {% endif %}
 {% endblock %}
