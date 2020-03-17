@@ -17,13 +17,19 @@
             {% for player in players %}
                 <tr>
                     <td>{{ player.name }}</td>
-                    <td><a href="{{ url_for('main_bp.user_overview', id=player.id) }}" class="green-btn">Statistics</a></td>
+                    <td>
+                        <button>
+                            <a href="{{ url_for('main_bp.user_overview', id=player.id) }}" class="green-btn">Statistics</a>
+                        </button>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
     <div class="text-right">
-        <a href="{{ url_for('main_bp.create') }}" class="green-btn">Create a new game</a>
+        <button>
+            <a href="{{ url_for('main_bp.create') }}">Create a new game</a>
+        </button>
     </div>
 {% endblock %}

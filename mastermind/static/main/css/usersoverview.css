@@ -17,20 +17,3 @@ td {
     font-weight: bold;
     font-size: 1.3em;
 }
-
-.green-btn {
-    background-color: #6EDC38;
-    color: white;
-    padding: 4px 25px;
-    font-weight: bold;
-}
-
-a.green-btn {
-    border-radius: 0.15em;
-}
-
-a.green-btn:hover {
-    text-decoration: none;
-    color: white;
-    background-color: #61C331;
-}

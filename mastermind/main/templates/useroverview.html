@@ -53,12 +53,16 @@
         {% endif %}
 
         <div class="text-right">
-            <a href="{{ url_for('main_bp.create') }}" class="green-btn">Create a new game</a>
+            <button>
+                <a href="{{ url_for('main_bp.create') }}" class="green-btn">Create a new game</a>
+            </button>
         </div>
     {% else %}
         <div class="text-center">
             <h3 class="mt-4 mb-3">Could not find player</h3>
-            <a href="{{ url_for('main_bp.users_overview') }}" class="green-btn">Return to users</a>
+            <button>
+                <a href="{{ url_for('main_bp.users_overview') }}" class="green-btn">Return to player overview</a>
+            </button>
         </div>
     {% endif %}
 {% endblock %}
