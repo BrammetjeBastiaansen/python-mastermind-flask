@@ -35,4 +35,4 @@ main_bp.add_url_rule("/game", view_func=New_Game_Controller.as_view("game", play
 main_bp.add_url_rule("/game", view_func=New_Game_Controller.as_view("game_update", player_model, game_model), methods=["POST"])
 
 main_bp.add_url_rule("/users-overview", view_func=Usersoverview_Controller.as_view("users_overview"), methods=["GET"])
-main_bp.add_url_rule("/user-overview", view_func=Useroverview_Controller.as_view("user_overview"), methods=["GET"])
+main_bp.add_url_rule("/user-overview/<id>", view_func=Useroverview_Controller.as_view("user_overview"), methods=["GET"])

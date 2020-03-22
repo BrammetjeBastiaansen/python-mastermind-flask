@@ -18,8 +18,8 @@ class Game(db.Model):
     color_amount = db.Column(db.Integer, nullable=False)
     position_amount = db.Column(db.Integer, nullable=False)
     played_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    cheats_used = db.Column(db.Boolean)
-    answers_guessed_in_turns = db.Column(db.Integer)
+    cheats_used = db.Column(db.Boolean, default=False)
+    answers_guessed_in_turns = db.Column(db.Integer, default=0)
 
     def __repr__(self):
         return f"Game(id={self.id}, player_id={self.player_id}, double_colors_allowed={self.double_colors_allowed}," \

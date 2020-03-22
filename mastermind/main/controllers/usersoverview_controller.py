@@ -8,4 +8,4 @@ class Usersoverview_Controller(MethodView):
         self._player_model = Player_Model()
 
     def get(self):
-        return render_template("usersoverview.html")
+        return render_template("usersoverview.html", players=self._player_model.get_all_players())

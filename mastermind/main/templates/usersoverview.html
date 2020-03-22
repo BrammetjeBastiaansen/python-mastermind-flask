@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block stylesheet %}
-    <link href="{{ url_for('static', filename='main/css/users_overview.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='main/css/usersoverview.css') }}" rel="stylesheet" />
 {% endblock %}
 
 {% block box_content %}
@@ -14,18 +14,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Cees Melis</td>
-                <td><button class="green-btn">Statistics</button></td>
-            </tr>
-            <tr>
-                <td>Bram Bastiaansen</td>
-                <td><button class="green-btn">Statistics</button></td>
-            </tr>
+            {% for player in players %}
+                <tr>
+                    <td>{{ player.name }}</td>
+                    <td>
+                        <button>
+                            <a href="{{ url_for('main_bp.user_overview', id=player.id) }}" class="green-btn">Statistics</a>
+                        </button>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 
     <div class="text-right">
-        <button class="green-btn">Create new game</button>
+        <button>
+            <a href="{{ url_for('main_bp.create') }}">Create a new game</a>
+        </button>
     </div>
 {% endblock %}
