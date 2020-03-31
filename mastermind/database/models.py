@@ -1,13 +1,5 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-
-app = Flask(__name__, instance_relative_config=True)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///site.db'
-db = SQLAlchemy(app)
-
-#from mastermind.app import db
+from mastermind.app import db
 from datetime import datetime
-
 
 class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)
