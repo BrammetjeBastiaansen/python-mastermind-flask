@@ -12,9 +12,10 @@ class Player(db.Model):
 
 # TODO: As soon as the database session is commited, all the duplicate colors in game_colors will not be saved. I.e. a game can't have duplicate colors. The id column doesn't really do anything.
 game_colors = db.Table("game_colors",
-    db.Column("id", db.Integer, primary_key=True),
+    db.Column("id", db.Integer),
     db.Column("game_id", db.Integer, db.ForeignKey("game.id")),
-    db.Column("color_id", db.Integer, db.ForeignKey("color.id"))
+    db.Column("color_id", db.Integer, db.ForeignKey("color.id")),
+    db.PrimaryKeyConstraint("id"),
 )
 
 
@@ -38,9 +39,10 @@ class Game(db.Model):
 
 # TODO: Read todo above.
 attempt_colors = db.Table("attempt_colors",
-    db.Column("id", db.Integer, primary_key=True),
+    db.Column("id", db.Integer),
     db.Column("attempt_id", db.Integer, db.ForeignKey("attempt.id")),
-    db.Column("color_id", db.Integer, db.ForeignKey("color.id"))
+    db.Column("color_id", db.Integer, db.ForeignKey("color.id")),
+    db.PrimaryKeyConstraint("id"),
 )
 
 
