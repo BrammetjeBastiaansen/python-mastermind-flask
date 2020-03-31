@@ -1,22 +1,34 @@
-from mastermind.app import db
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__, instance_relative_config=True)
+app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///site.db'
+db = SQLAlchemy(app)
+
+#from mastermind.app import db
 from datetime import datetime
+
 
 class Player(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), unique=True, nullable=False)
-    games = db.relationship('Game', backref='player', lazy=True)
+
+    games = db.relationship('Game', back_populates='player')
 
     def __repr__(self):
         return f"User(id={self.id}, name={self.name})"
 
 
-# TODO: As soon as the database session is commited, all the duplicate colors in game_colors will not be saved. I.e. a game can't have duplicate colors. The id column doesn't really do anything.
-game_colors = db.Table("game_colors",
-    db.Column("id", db.Integer),
-    db.Column("game_id", db.Integer, db.ForeignKey("game.id")),
-    db.Column("color_id", db.Integer, db.ForeignKey("color.id")),
-    db.PrimaryKeyConstraint("id"),
-)
+class GameColor(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
+    color_id = db.Column(db.Integer, db.ForeignKey('color.id'), nullable=False)
+
+    game = db.relationship('Game', back_populates='game_colors')
+    color = db.relationship('Color', back_populates='game_colors')
+
+    def __repr__(self):
+        return f"GameColor(id={self.id}, game_id={self.game_id}, color_id={self.color_id})"
 
 
 class Game(db.Model):
@@ -28,8 +40,10 @@ class Game(db.Model):
     played_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     cheats_used = db.Column(db.Boolean, default=False)
     answers_guessed_in_turns = db.Column(db.Integer, default=0)
-    colors = db.relationship("Color", secondary=game_colors, backref="game", lazy=True)
-    attempts = db.relationship('Attempt', backref='game', lazy=True)
+
+    player = db.relationship('Player', back_populates='games')
+    game_colors = db.relationship('GameColor', back_populates='game')
+    attempts = db.relationship('Attempt', back_populates='game')
 
     def __repr__(self):
         return f"Game(id={self.id}, player_id={self.player_id}, double_colors_allowed={self.double_colors_allowed}," \
@@ -37,19 +51,24 @@ class Game(db.Model):
                f" cheats_used={self.cheats_used})"
 
 
-# TODO: Read todo above.
-attempt_colors = db.Table("attempt_colors",
-    db.Column("id", db.Integer),
-    db.Column("attempt_id", db.Integer, db.ForeignKey("attempt.id")),
-    db.Column("color_id", db.Integer, db.ForeignKey("color.id")),
-    db.PrimaryKeyConstraint("id"),
-)
+class AttemptColor(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    attempt_id = db.Column(db.Integer, db.ForeignKey('attempt.id'), nullable=False)
+    color_id = db.Column(db.Integer, db.ForeignKey('color.id'), nullable=False)
+
+    attempt = db.relationship('Attempt', back_populates='attempt_colors')
+    color = db.relationship('Color', back_populates='attempt_colors')
+
+    def __repr__(self):
+        return f"AttemptColor(id={self.id}, attempt_id={self.attempt_id}, color_id={self.color_id})"
 
 
 class Attempt(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
-    colors = db.relationship("Color", secondary=attempt_colors, backref="attempt", lazy=True)
+
+    attempt_colors = db.relationship('AttemptColor', back_populates='attempt')
+    game = db.relationship('Game', back_populates='attempts')
 
     def __repr__(self):
         return f"Attempt(id={self.id})"
@@ -58,6 +77,9 @@ class Attempt(db.Model):
 class Color(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(40), nullable = False)
+
+    game_colors = db.relationship('GameColor', back_populates='color')
+    attempt_colors = db.relationship('AttemptColor', back_populates='color')
 
     def __repr__(self):
         return f"Color(id={self.id}, name={self.name})"
