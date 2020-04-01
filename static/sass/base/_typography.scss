@@ -1,0 +1,44 @@
+// Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #707070;
+}
+
+div, h5, p, span, a, i, button, label {
+    font-size: .75rem;
+}
+
+h1 {
+    color: #202020;
+}
+
+a i {
+    font-size: inherit;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+.font-size-1-rem {
+    font-size: 1rem;
+}
+
+.font-size-125-rem {
+    font-size: 1.25rem;
+}
+
+.padding-bottom-0px {
+    padding-bottom: 0px !important;
+}
+
+.margin-top-15px {
+    margin-top: 15px;
+}
+
+.min-width-250px {
+    min-width: 250px;
+}
