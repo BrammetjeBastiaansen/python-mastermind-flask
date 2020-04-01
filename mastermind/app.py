@@ -3,6 +3,7 @@ import os
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_assets import Environment, Bundle
 
 
 db = SQLAlchemy()
@@ -26,6 +27,14 @@ def create_app():
         db.create_all()
 
         app.register_blueprint(main_routes.main_bp)
+
+    assets = Environment(app)
+    assets.url = app.static_url_path
+    assets.debug = True
+
+    scss = Bundle('sass/app.scss',
+                  filters='pyscss', output='gen/bundle.css', depends='**/*.scss')
+    assets.register('scss_bundle', scss)
 
     return app
 
