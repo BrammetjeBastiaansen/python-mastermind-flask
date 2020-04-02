@@ -38,7 +38,7 @@ def create_app():
         'sass/app.scss',
         '../main/static/sass/main.scss',
         filters='pyscss',
-        depends=('**/*.scss'),  # Added to solve this issue
+        depends='sass/**/*.scss',
         output='gen/bundle.css'
     )
 
