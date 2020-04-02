@@ -27,10 +27,11 @@
             <table class="mb-5">
                 <thead>
                     <tr>
-                        <th>Ranking</th>
+                        <th>Nummer</th>
                         <th>Datum</th>
                         <th>Pogingen</th>
                         <th>Cheatmode</th>
+                        <th>Gewonnen</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,8 +39,13 @@
                         <tr>
                             <td>#{{ game.id }}</td>
                             <td>{{ game.played_on.date() }}</td>
-                            <td>{{ game.answers_guessed_in_turns }} {{ "poging" if game.answers_guessed_in_turns == 1 else "pogingen"}}</td>
-                            <td>{{ "Active" if game.cheats_used else "Not active"}}</td> <!-- TODO -->
+                            {% if game.is_finished %}
+                                <td>{{ game.attempts|length }} {{ "poging" if game.attempts|length == 1 else "pogingen"}}</td>
+                            {% else %}
+                                <td>N/A</td>
+                            {% endif %}
+                            <td>{{ "Ja" if game.cheats_used else "Nee"}}</td>
+                            <td>{{ "Ja" if game.has_won else "Nee"}}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
