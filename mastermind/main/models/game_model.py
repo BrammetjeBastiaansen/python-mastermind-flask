@@ -33,10 +33,4 @@ class Game_Model:
         self._game_service.create_game_sequence(game_id, amount_of_colors, position_amount)
 
     def get_game_sequence(self):
-<<<<<<< Updated upstream
         return self._game_service.get_game_colors(self._current_game)
-=======
-        colors = self._game_service.get_game_colors(self._current_game)
-
-        return colors
->>>>>>> Stashed changes
