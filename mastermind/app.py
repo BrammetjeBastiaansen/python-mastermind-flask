@@ -32,8 +32,16 @@ def create_app():
     assets.url = app.static_url_path
     assets.debug = True
 
-    scss = Bundle('sass/app.scss', '../main/static/sass/main.scss',
-                  filters='pyscss', output='gen/bundle.css', depends='**/*.scss')
+
+
+    scss = Bundle(
+        'sass/app.scss',
+        '../main/static/sass/main.scss',
+        filters='pyscss',
+        depends=('**/*.scss'),  # Added to solve this issue
+        output='gen/bundle.css'
+    )
+
     assets.register('scss_bundle', scss)
 
     return app

@@ -339,7 +339,7 @@ th, td {
                                                                                   display: flex;
                                                                                   justify-content: center;
                                                                                   left: 0;
-                                                                                  top: 1px;
+                                                                                  top: 6px;
                                                                                   z-index: 10000; }
 
                                                                                   @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000311}}
