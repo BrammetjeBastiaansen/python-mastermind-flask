@@ -40,7 +40,16 @@ def create_app():
         output='gen/bundle.css'
     )
 
+    js = Bundle(
+        'js/app.js',
+        '../main/static/js/app.js',
+        filters='jsmin',
+        depends=['js/**/*.js', '../main/static/js/**/*.js'],
+        output='gen/bundle.js'
+    )
+
     assets.register('scss_bundle', scss)
+    assets.register('js_bundle', js)
 
     return app
 

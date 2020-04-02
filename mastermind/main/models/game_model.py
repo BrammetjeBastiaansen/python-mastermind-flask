@@ -1,12 +1,12 @@
-import datetime
-
-from mastermind.database.models import Game, Color, GameColor, db
-from random import shuffle, choices
+from mastermind.main.services.game_service import Game_Service
 
 
 class Game_Model:
-    def __init__(self):
+
+    def __init__(self, game_service):
         self._current_game = None
+        self._game_sequence = None
+        self._game_service = game_service
 
     @property
     def current_game(self):
@@ -17,37 +17,22 @@ class Game_Model:
         self._current_game = current_game
 
     def create_new_game(self, player_id, double_colors_allowed, cheat_mode_allowed, amount_of_colors, position_amount):
-        new_game = Game(
-            player_id=player_id,
-            double_colors_allowed=double_colors_allowed,
-            color_amount=amount_of_colors,
-            position_amount=position_amount,
-            played_on=datetime.datetime.now(),
-            cheats_used=cheat_mode_allowed,
+        self.current_game = self._game_service.create_new_game(
+            player_id,
+            double_colors_allowed,
+            cheat_mode_allowed,
+            amount_of_colors,
+            position_amount
         )
+        self.__create_random_sequence_for_game(self.current_game.id, amount_of_colors, position_amount)
 
-        self.current_game = new_game
-
-        db.session.add(new_game)
-
-        result = db.session.commit()
-
-        self.__create_random_sequence_for_game(new_game.id, amount_of_colors, position_amount)
-
-        return result
-
+        return self._current_game
 
     def __create_random_sequence_for_game(self, game_id, amount_of_colors, position_amount):
-        game_colors = Color.query.limit(amount_of_colors).all()
-        color_ids = []
+        self._game_service.create_game_sequence(game_id, amount_of_colors, position_amount)
 
-        for game_color in game_colors:
-            color_ids.append(game_color.id)
+    def get_game_sequence(self):
+        print(self._current_game)
+        colors = self._game_service.get_game_colors(self._current_game)
 
-        sequence_ids = choices(color_ids, k=position_amount)
-
-        for sequence_id in sequence_ids:
-            sequence_color = GameColor(game_id=game_id, color_id=sequence_id)
-            db.session.add(sequence_color)
-
-        db.session.commit()
+        return colors

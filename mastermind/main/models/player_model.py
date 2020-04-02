@@ -1,9 +1,12 @@
 from mastermind.database.models import Player, Game, db
 import sqlalchemy as sa
 
+
 class Player_Model:
-    def __init__(self):
+
+    def __init__(self, player_service):
         self._current_player = None
+        self._player_service = player_service
 
     @property
     def get_current_player(self):
@@ -14,18 +17,16 @@ class Player_Model:
         self._current_player = player
 
     def get_existing_player(self, playerName):
-        return Player.query.filter_by(name=playerName).first()
+        return self._player_service.get_existing_player(playerName)
 
     def get_player_by_id(self, id):
-        return Player.query.get(id)
+        return self._player_service.get_player_by_id(id)
 
     def create_new_player(self, playerName):
-        newPlayer = Player(name=playerName)
-        db.session.add(newPlayer)
-        return db.session.commit()
+        return self._player_service.create_new_player(playerName)
 
     def get_all_players(self):
-        return Player.query.all()
+        return self._player_service.get_all_players()
 
     def get_played_game_amounts_by_date(self, player_id):
-        return db.session.query(sa.func.date(Game.played_on).label("date"), sa.func.count(Game.id).label("amount")).filter_by(player_id=player_id).group_by(sa.func.date(Game.played_on)).all()
+        return self._player_service.get_played_game_amounts_by_date(player_id)
