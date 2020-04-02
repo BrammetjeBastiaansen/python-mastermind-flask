@@ -6,3 +6,13 @@
     transform: scale(1.10);
   }
 }
+
+@keyframes slide-in-modal {
+  0% {
+    top: -160vw;
+  }
+
+  100% {
+    top: calc(100% - 80vw);
+  }
+}

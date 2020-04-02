@@ -268,9 +268,10 @@ th, td {
 
                                                         @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000325}}
                                                         button:hover {
-                                                          background-color: #61c331; }
+                                                          background-color: #61c331;
+                                                          animation: scale-up-center 0.1s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
-                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000329}}
+                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000330}}
                                                           button a:hover {
                                                             color: #FEFEFE;
                                                             text-decoration: none; }
