@@ -1,3 +1,9 @@
+.border-container-content {
+    border-radius: 10px;
+    border: 1px solid $borderColor;
+    padding: 10px;
+}
+
 .container-content {
     padding: 5px;
     margin-bottom: 15px;
@@ -19,16 +25,23 @@ div.color {
     margin: 0 10px 15px 10px;
 }
 
-div.red-color { background-color: #F90606; }
-div.blue-color { background-color: #2D1AD4; }
-div.green-color { background-color: #12F538; }
-div.yellow-color { background-color: #DEF512; }
-div.orange-color { background-color: #FFB507; }
-div.brown-color { background-color: #AC6F14; }
+.colors {
+    text-align: center;
+}
+
+div.red-color { background-color: $red; }
+div.blue-color { background-color: $navyblue; }
+div.green-color { background-color: $lightgreen; }
+div.yellow-color { background-color: $yellow; }
+div.orange-color { background-color: $orange; }
+div.brown-color { background-color: $brown; }
 
 div.color-slot {
-    border: 1px solid #989898;
+    border: 1px solid $borderColor;
     margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    background-color: $white;
 }
 
 .no-table-whitespace {
@@ -36,10 +49,14 @@ div.color-slot {
 }
 
 .guess-wrapper {
-    background-color: #EFEFEF;
-    border: 1px solid #70746E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border: 1px solid $borderColor;
     border-radius: 0.3em;
     padding: 5px 0;
+    height: 100%;
 }
 
 .first-guess {
@@ -47,7 +64,7 @@ div.color-slot {
 }
 
 .answer {
-    background-color: #6EDC38;
+    background-color: $lightgreen;
 }
 
 .answer .color-slot {
@@ -55,16 +72,24 @@ div.color-slot {
 }
 
 .hint-square {
-    border: 1px solid #70746E;
-    background-color: #6EDC38;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid $borderColor;
+    background-color: $lightgreen;
     border-radius: 0.3em;
-    padding: 0 3px;
 }
 
 .hint-slot {
-    width: 20px;
-    height: 20px;
+    min-width: 17px;
+    max-width: 17px;
+    height: 17px;
     margin: 5px;
     border-radius: 0.15em;
     background-color: white;
+}
+
+.draggable-color:hover, .color-slot:hover, .hint-slot:hover {
+    animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    cursor: pointer;
 }
