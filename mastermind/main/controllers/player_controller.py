@@ -20,7 +20,4 @@ class Player_Controller(MethodView):
 
         self._player_model.set_current_player = self._player_model.get_existing_player(playerName)
 
-        # TODO: remove this
-        print(self._player_model.get_current_player)
-
         return redirect("/new-game")

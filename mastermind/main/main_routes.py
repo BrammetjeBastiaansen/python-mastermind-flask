@@ -6,20 +6,25 @@ from .controllers.game_controller import Game_Controller
 from .controllers.new_game_controller import New_Game_Controller
 from mastermind.main.models.player_model import Player_Model
 from mastermind.main.models.game_model import Game_Model
-
+from .services.game_service import Game_Service
+from .services.player_service import Player_Service
 
 main_bp = Blueprint('main_bp', __name__,
                     template_folder='templates',
                     static_folder='static',
                     static_url_path='/main/static')
 
+# Services
+player_service = Player_Service()
+game_service = Game_Service()
+
 # Models
 # We declare the models here and pass them to the our MethodView controller.
 # The reason for this is because there is no cleaner way to do this using MethodView.
 # It's still better then having a messy and un-maintainable router.
 
-player_model = Player_Model()
-game_model = Game_Model()
+player_model = Player_Model(player_service)
+game_model = Game_Model(game_service)
 
 
 # Routes

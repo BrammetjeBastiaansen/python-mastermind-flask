@@ -8,7 +8,7 @@ class Game_Controller(MethodView):
         self._game_model = game_model
 
     def get(self):
-        return render_template("game_screen.html")
+        return render_template("game_screen.html", game_sequence=self._game_model.get_game_sequence())
 
     def post(self):
         pass
