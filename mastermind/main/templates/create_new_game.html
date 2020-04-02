@@ -15,11 +15,11 @@
                     </div>
                     <div class="radio-button-group input-inline">
                         <label class="radio-button-container">Off
-                            <input type="radio" name="doubleColorOption" value="0" checked />
+                            <input type="radio" name="doubleColorOption" class="doubleColorOption" value="0" checked />
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-button-container">On
-                            <input type="radio" name="doubleColorOption" value="1" />
+                            <input type="radio" name="doubleColorOption" class="doubleColorOption" value="1" />
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -45,11 +45,11 @@
                 <div class="radio-button">
                     <div class="radio-button-group input-inline height-36px">
                         {% for i in range(6, 11) %}
-                             <label class="radio-button-container-2">
+                             <label class="radio-button-container-2 amount-of-colors-container">
                                  <div class="checkmark-2-number">
                                      <span>{{i}}</span>
                                  </div>
-                                <input type="radio" name="amountOfColorsOption" value="{{i}}" {{'checked' if i == 6}} />
+                                <input type="radio" name="amountOfColorsOption" class="amountOfColorsOption" value="{{i}}" {{'checked' if i == 6}} />
                                 <span class="checkmark-2"></span>
                             </label>
                         {% endfor %}
@@ -61,11 +61,11 @@
                 <div class="radio-button">
                     <div class="radio-button-group input-inline height-36px">
                         {% for i in range(4, 11) %}
-                             <label class="radio-button-container-2">
+                             <label class="radio-button-container-2 amount-of-pins-container">
                                  <div class="checkmark-2-number">
                                      <span>{{i}}</span>
                                  </div>
-                                <input type="radio" name="amountOfPins" value="{{i}}" {{'checked' if i == 4}} />
+                                <input type="radio" name="amountOfPins" class="amountOfPins" value="{{i}}" {{'checked' if i == 4}} />
                                 <span class="checkmark-2"></span>
                             </label>
                         {% endfor %}
