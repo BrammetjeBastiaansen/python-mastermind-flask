@@ -2,19 +2,20 @@
 
 {% block side_bar %}
 
-    <div class="box-content">
+    <div class="box-content mr-4 ml-4">
         <div class="border-container">
-            <div class="border-container-content">
+            <div class="border-container-content mb-2">
                 <div class="border-container-title font-bold mb-3">
                     Colors
                 </div>
                 <div class="colors">
-                    <div class="color red-color"></div>
-                    <div class="color blue-color"></div>
-                    <div class="color green-color"></div>
-                    <div class="color yellow-color"></div>
-                    <div class="color orange-color"></div>
-                    <div class="color brown-color"></div>
+<!--                    TODO: Make dynamic-->
+                    <div class="color draggable-color red-color"></div>
+                    <div class="color draggable-color blue-color"></div>
+                    <div class="color draggable-color green-color"></div>
+                    <div class="color draggable-color yellow-color"></div>
+                    <div class="color draggable-color orange-color"></div>
+                    <div class="color draggable-color brown-color"></div>
                 </div>
             </div>
             <div class="button-container">
@@ -30,318 +31,28 @@
 {% block main %}
 
     <div class="container-content full-width">
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper first-guess">
-                    <div class="d-table m-auto no-table-whitespace">
+        {% for n in range(13) %}
+            <div class="row margin-bottom-5px">
+                <div class="col-md-10">
+                    <div class="guess-wrapper {{ 'green-color' if n == 12 }}">
+<!--                        TODO: Make dynamic-->
                         <div class="color color-slot"></div>
                         <div class="color color-slot"></div>
                         <div class="color color-slot"></div>
                         <div class="color color-slot"></div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
+                <div class="col-md-2">
+                    <div class="hint-square">
+<!--                        TODO: Make dynamic-->
                         <div class="hint-slot"></div>
                         <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
                         <div class="hint-slot"></div>
                         <div class="hint-slot"></div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col-md-10">
-                <div class="guess-wrapper answer">
-                    <div class="d-table m-auto no-table-whitespace">
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="hint-square">
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                    <div class="row d-flex justify-content-center">
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
 {% endblock %}
