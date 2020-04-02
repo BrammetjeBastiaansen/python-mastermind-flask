@@ -60,6 +60,7 @@ class Attempt(db.Model):
     game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
 
     attempt_colors = db.relationship('AttemptColor', back_populates='attempt')
+    attempt_pins = db.relationship('AttemptPin', back_populates='attempt')
     game = db.relationship('Game', back_populates='attempts')
 
     def __repr__(self):
@@ -68,10 +69,32 @@ class Attempt(db.Model):
 
 class Color(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(40), nullable = False)
+    name = db.Column(db.String(40), nullable=False)
 
     game_colors = db.relationship('GameColor', back_populates='color')
     attempt_colors = db.relationship('AttemptColor', back_populates='color')
 
     def __repr__(self):
         return f"Color(id={self.id}, name={self.name})"
+
+
+class AttemptPin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    attempt_id = db.Column(db.Integer, db.ForeignKey('attempt.id'), nullable=False)
+    pin_id = db.Column(db.Integer, db.ForeignKey('pin.id'), nullable=False)
+
+    attempt = db.relationship('Attempt', back_populates='attempt_pins')
+    pin = db.relationship('Pin', back_populates='attempt_pins')
+
+    def __repr__(self):
+        return f"AttemptPin(id={self.id}, attempt_id={self.attempt_id}, pin_id={self.pin_id})"
+
+
+class Pin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    color = db.Column(db.String(40), nullable=False)
+
+    attempt_pins = db.relationship('AttemptPin', back_populates='pin')
+
+    def __repr__(self):
+        return f"Pin(id={self.id}, color={self.color})"
