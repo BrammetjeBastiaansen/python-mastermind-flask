@@ -93,3 +93,12 @@ div.color-slot {
     animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     cursor: pointer;
 }
+
+* {
+    background-color: blue;
+}
+
+p.large-green-text {
+    color: #6EDC38;
+    font-size: 2em;
+}
