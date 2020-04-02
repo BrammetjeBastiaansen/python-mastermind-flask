@@ -1,47 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap'); 
-  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\000038}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\000038}}
   * {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     color: #707070; }
 
-    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000314}}
+    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000314}}
     div, h5, p, span, a, i, button, label {
       font-size: 0.75rem; }
 
-      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000318}}
+      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000318}}
       h1 {
         color: #202020; }
 
-        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000322}}
+        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000322}}
         a i {
           font-size: inherit; }
 
-          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000326}}
+          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000326}}
           a, a:hover, a:focus {
             text-decoration: none; }
 
-            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000330}}
+            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000330}}
             .font-size-1-rem {
               font-size: 1rem; }
 
-              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000334}}
+              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000334}}
               .font-size-125-rem {
                 font-size: 1.25rem; }
 
-                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000338}}
+                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000338}}
                 .padding-bottom-0px {
                   padding-bottom: 0px !important; }
 
-                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000342}}
+                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000342}}
                   .margin-top-15px {
                     margin-top: 15px; }
 
-                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000346}}
+                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\_typography\.scss}line{font-family:\0000346}}
                     .min-width-250px {
                       min-width: 250px; }
 
-                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\000036}}
+                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\000036}}
                       body {
                         height: 100vh;
                         margin: 0;
@@ -50,7 +50,7 @@
                         background-size: cover;
                         background-repeat: no-repeat; }
 
-                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000315}}
+                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000315}}
                         .overlay {
                           position: absolute;
                           top: 0;
@@ -60,120 +60,120 @@
                           background-color: rgba(255, 255, 255, 0.3);
                           color: white; }
 
-                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000325}}
+                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000325}}
                           .z-index-999 {
                             z-index: 999; }
 
-                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000329}}
+                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000329}}
                             .container {
                               height: 100vh;
                               display: flex;
                               justify-content: center;
                               align-items: center; }
 
-                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000336}}
+                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000336}}
                               .center {
                                 text-align: center; }
 
-                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000340}}
+                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000340}}
                                 .height-36px {
                                   height: 36px; }
 
-                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000344}}
+                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000344}}
                                   .margin-bottom-15px {
                                     margin-bottom: 15px; }
 
-                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000348}}
+                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000348}}
                                     .margin-bottom-5px {
                                       margin-bottom: 5px; }
 
-                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000352}}
+                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000352}}
                                       .margin-bottom-20px {
                                         margin-bottom: 20px; }
 
-                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000356}}
+                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000356}}
                                         .full-width {
                                           width: 100%; }
 
-                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000360}}
+                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000360}}
                                           .title {
                                             text-align: center; }
 
-                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000364}}
+                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000364}}
                                             .fat {
                                               font-weight: bold; }
 
-                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000368}}
+                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000368}}
                                               .thin {
                                                 font-weight: 400; }
 
-                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000372}}
+                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000372}}
                                                 .title span {
                                                   font-size: 40px; }
 
-                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000376}}
+                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000376}}
                                                   .title h1 {
                                                     margin-bottom: 0px; }
 
-                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000380}}
+                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\base\.scss}line{font-family:\0000380}}
                                                     .sub-title {
                                                       font-size: 12px;
                                                       font-weight: bold; }
 
-                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\000037}}
+                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\000037}}
                                                       @keyframes scale-up-center {
-                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\000037}}
+                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\000037}}
                                                         0% {
                                                           transform: scale(1);   }
-                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000310}}
+                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000310}}
                                                           100% {
                                                             transform: scale(1.1);   }
 }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000316}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000316}}
   @keyframes slide-in-modal {
-    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000316}}
+    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000316}}
     0% {
       top: -160vw;   }
-      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000320}}
+      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000320}}
       100% {
         top: calc(100% - 80vw);   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\000035}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\000035}}
 th, td {
   padding-right: 25px; }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\000039}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\000039}}
   th {
     border-bottom: 1px solid #707070;
     padding-bottom: 5px; }
 
-    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\0000314}}
+    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\0000314}}
     td {
       color: #E8E800;
       font-weight: bold; }
 
-      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\000036}}
+      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\000036}}
       .border-container-content {
         border-radius: 10px;
         border: 1px solid #707070;
         padding: 10px; }
 
-        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000312}}
+        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000312}}
         .container-content {
           padding: 5px;
           margin-bottom: 15px; }
 
-          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000317}}
+          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000317}}
           .border-container-title {
             text-align: center; }
 
-            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000321}}
+            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000321}}
             .button-container {
               justify-content: center; }
 
-              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000325}}
+              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000325}}
               div.color {
                 width: 50px;
                 height: 50px;
@@ -181,35 +181,35 @@ th, td {
                 display: inline-block;
                 margin: 0 10px 15px 10px; }
 
-                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000333}}
+                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000333}}
                 .colors {
                   text-align: center; }
 
-                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000337}}
+                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000337}}
                   div.red-color {
                     background-color: #F90606; }
 
-                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000338}}
+                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000338}}
                     div.blue-color {
                       background-color: #2D1AD4; }
 
-                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000339}}
+                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000339}}
                       div.green-color {
                         background-color: #6EDC38; }
 
-                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000340}}
+                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000340}}
                         div.yellow-color {
                           background-color: #DEF512; }
 
-                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000341}}
+                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000341}}
                           div.orange-color {
                             background-color: #FFB507; }
 
-                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000342}}
+                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000342}}
                             div.brown-color {
                               background-color: #AC6F14; }
 
-                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000344}}
+                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000344}}
                               div.color-slot {
                                 border: 1px solid #707070;
                                 margin: 0 10px;
@@ -217,11 +217,11 @@ th, td {
                                 width: 40px;
                                 background-color: #FEFEFE; }
 
-                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000352}}
+                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000352}}
                                 .no-table-whitespace {
                                   margin-bottom: -7px !important; }
 
-                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000356}}
+                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000356}}
                                   .guess-wrapper {
                                     display: flex;
                                     justify-content: center;
@@ -232,19 +232,19 @@ th, td {
                                     padding: 5px 0;
                                     height: 100%; }
 
-                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000367}}
+                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000367}}
                                     .first-guess {
                                       background-color: inherit; }
 
-                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000371}}
+                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000371}}
                                       .answer {
                                         background-color: #6EDC38; }
 
-                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000375}}
+                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000375}}
                                         .answer .color-slot {
                                           background-color: white; }
 
-                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000379}}
+                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000379}}
                                           .hint-square {
                                             display: flex;
                                             flex-wrap: wrap;
@@ -253,7 +253,7 @@ th, td {
                                             background-color: #6EDC38;
                                             border-radius: 0.3em; }
 
-                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000388}}
+                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000388}}
                                             .hint-slot {
                                               min-width: 17px;
                                               max-width: 17px;
@@ -262,222 +262,252 @@ th, td {
                                               border-radius: 0.15em;
                                               background-color: white; }
 
-                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000397}}
+                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000397}}
                                               .draggable-color:hover, .color-slot:hover, .hint-slot:hover {
                                                 animation: scale-up-center 0.05s cubic-bezier(0.39, 0.575, 0.565, 1) both;
                                                 cursor: pointer; }
 
-                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\000037}}
-                                                table {
-                                                  border-collapse: separate;
-                                                  border-spacing: 50px 5px; }
+                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003102}}
+                                                p.large-green-text {
+                                                  color: #6EDC38;
+                                                  font-size: 3em;
+                                                  font-weight: bold; }
 
-                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\0000312}}
-                                                  th {
-                                                    border-bottom: 1px solid #707070;
-                                                    padding-bottom: 5px; }
+                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003108}}
+                                                  p.modal-text {
+                                                    font-size: 2em;
+                                                    font-weight: bold; }
 
-                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\0000317}}
-                                                    tr {
-                                                      margin-top: 50px; }
+                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003113}}
+                                                    .modal-overlay {
+                                                      position: absolute;
+                                                      top: 0;
+                                                      height: 100vh;
+                                                      width: 100vw;
+                                                      background-color: rgba(0, 0, 0, 0.5);
+                                                      z-index: 99999; }
 
-                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\0000321}}
-                                                      td {
-                                                        color: #E8E800;
-                                                        font-weight: bold;
-                                                        font-size: 1.3em; }
+                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003122}}
+                                                      .modal {
+                                                        z-index: 999999;
+                                                        display: block;
+                                                        padding-right: 17px; }
 
-                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000310}}
-                                                        .button-container {
-                                                          display: flex;
-                                                          justify-content: flex-end; }
+                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003128}}
+                                                        .modal-dialog-centered {
+                                                          border-radius: 2em; }
 
-                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000315}}
-                                                          button {
-                                                            padding: 5px 15px;
-                                                            background-color: #6EDC38;
-                                                            border: 0px solid black;
-                                                            border-radius: 4px;
-                                                            margin-left: 10px; }
+                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\000037}}
+                                                          table {
+                                                            border-collapse: separate;
+                                                            border-spacing: 50px 5px; }
 
-                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000323}}
-                                                            button a {
-                                                              color: #FEFEFE !important;
-                                                              font-weight: bold; }
+                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\0000312}}
+                                                            th {
+                                                              border-bottom: 1px solid #707070;
+                                                              padding-bottom: 5px; }
 
-                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000328}}
-                                                              button:hover {
-                                                                background-color: #61c331;
-                                                                animation: scale-up-center 0.05s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\0000317}}
+                                                              tr {
+                                                                margin-top: 50px; }
 
-                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000333}}
-                                                                button a:hover {
-                                                                  color: #FEFEFE;
-                                                                  text-decoration: none; }
+                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\usersoverview\.scss}line{font-family:\0000321}}
+                                                                td {
+                                                                  color: #E8E800;
+                                                                  font-weight: bold;
+                                                                  font-size: 1.3em; }
 
-                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000311}}
-                                                                  .box-container {
-                                                                    width: 100%;
+                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000310}}
+                                                                  .button-container {
                                                                     display: flex;
-                                                                    justify-content: center;
-                                                                    align-items: center; }
+                                                                    justify-content: flex-end; }
 
-                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000318}}
-                                                                    .box {
-                                                                      background-color: #FEFEFE;
-                                                                      border-radius: 20px;
-                                                                      border: 1px solid #707070;
-                                                                      padding: 10px 20px 10px;
-                                                                      min-width: 500px; }
+                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000315}}
+                                                                    button {
+                                                                      padding: 5px 15px;
+                                                                      background-color: #6EDC38;
+                                                                      border: 0px solid black;
+                                                                      border-radius: 4px;
+                                                                      margin-left: 10px; }
 
-                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000326}}
-                                                                      .box-content {
-                                                                        padding-top: 25px; }
+                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000323}}
+                                                                      button a {
+                                                                        color: #FEFEFE !important;
+                                                                        font-weight: bold; }
 
-                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000314}}
-                                                                        .radio-button-container-2 {
-                                                                          display: block;
-                                                                          position: relative;
-                                                                          padding-left: 20px;
-                                                                          margin-bottom: 12px;
-                                                                          padding-right: 15px;
-                                                                          cursor: pointer;
-                                                                          font-size: 22px;
-                                                                          -webkit-user-select: none;
-                                                                          user-select: none; }
+                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000328}}
+                                                                        button:hover {
+                                                                          background-color: #61c331;
+                                                                          animation: scale-up-center 0.05s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
 
-                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000327}}
-                                                                          .radio-button-container-2 input {
-                                                                            position: absolute;
-                                                                            opacity: 0;
-                                                                            cursor: pointer;
-                                                                            height: 0;
-                                                                            width: 0; }
+                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\button\.scss}line{font-family:\0000333}}
+                                                                          button a:hover {
+                                                                            color: #FEFEFE;
+                                                                            text-decoration: none; }
 
-                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000336}}
-                                                                            .checkmark-2 {
-                                                                              position: absolute;
-                                                                              top: 0;
-                                                                              left: 0;
-                                                                              height: 35px;
-                                                                              width: 28px;
-                                                                              background-color: #eee;
-                                                                              border-radius: 8px; }
+                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000311}}
+                                                                            .box-container {
+                                                                              width: 100%;
+                                                                              display: flex;
+                                                                              justify-content: center;
+                                                                              align-items: center; }
 
-                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000347}}
-                                                                              .radio-button-container-2:hover input ~ .checkmark-2 {
-                                                                                background-color: #ccc; }
+                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000318}}
+                                                                              .box {
+                                                                                background-color: #FEFEFE;
+                                                                                border-radius: 20px;
+                                                                                border: 1px solid #707070;
+                                                                                padding: 10px 20px 10px;
+                                                                                min-width: 500px; }
 
-                                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000352}}
-                                                                                .radio-button-container-2 input:checked ~ .checkmark-2 {
-                                                                                  background-color: #bfe05a; }
+                                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000326}}
+                                                                                .box-content {
+                                                                                  padding-top: 25px; }
 
-                                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000357}}
-                                                                                  .checkmark-2:after {
-                                                                                    content: "";
-                                                                                    position: absolute;
-                                                                                    display: none; }
+                                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000314}}
+                                                                                  .radio-button-container-2 {
+                                                                                    display: block;
+                                                                                    position: relative;
+                                                                                    padding-left: 20px;
+                                                                                    margin-bottom: 12px;
+                                                                                    padding-right: 15px;
+                                                                                    cursor: pointer;
+                                                                                    font-size: 22px;
+                                                                                    -webkit-user-select: none;
+                                                                                    user-select: none; }
 
-                                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000364}}
-                                                                                    .radio-button-container-2 input:checked ~ .checkmark-2:after {
-                                                                                      display: block; }
+                                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000327}}
+                                                                                    .radio-button-container-2 input {
+                                                                                      position: absolute;
+                                                                                      opacity: 0;
+                                                                                      cursor: pointer;
+                                                                                      height: 0;
+                                                                                      width: 0; }
 
-                                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000368}}
-                                                                                      .checkmark-2-number {
+                                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000336}}
+                                                                                      .checkmark-2 {
                                                                                         position: absolute;
-                                                                                        width: 79%;
-                                                                                        display: flex;
-                                                                                        justify-content: center;
+                                                                                        top: 0;
                                                                                         left: 0;
-                                                                                        top: 6px;
-                                                                                        z-index: 10000; }
+                                                                                        height: 35px;
+                                                                                        width: 28px;
+                                                                                        background-color: #eee;
+                                                                                        border-radius: 8px; }
 
-                                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000314}}
-                                                                                        .radio-button-container {
-                                                                                          display: block;
-                                                                                          position: relative;
-                                                                                          padding-left: 35px;
-                                                                                          margin-bottom: 12px;
-                                                                                          padding-right: 15px;
-                                                                                          cursor: pointer;
-                                                                                          font-size: 22px;
-                                                                                          -webkit-user-select: none;
-                                                                                          user-select: none; }
+                                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000347}}
+                                                                                        .radio-button-container-2:hover input ~ .checkmark-2 {
+                                                                                          background-color: #ccc; }
 
-                                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000327}}
-                                                                                          .radio-button-container input {
-                                                                                            position: absolute;
-                                                                                            opacity: 0;
-                                                                                            cursor: pointer;
-                                                                                            height: 0;
-                                                                                            width: 0; }
+                                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000352}}
+                                                                                          .radio-button-container-2 input:checked ~ .checkmark-2 {
+                                                                                            background-color: #bfe05a; }
 
-                                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000336}}
-                                                                                            .checkmark {
+                                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000357}}
+                                                                                            .checkmark-2:after {
+                                                                                              content: "";
                                                                                               position: absolute;
-                                                                                              top: 0;
-                                                                                              left: 0;
-                                                                                              height: 25px;
-                                                                                              width: 25px;
-                                                                                              background-color: #eee;
-                                                                                              border-radius: 50%; }
+                                                                                              display: none; }
 
-                                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000347}}
-                                                                                              .radio-button-container:hover input ~ .checkmark {
-                                                                                                background-color: #ccc; }
+                                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000364}}
+                                                                                              .radio-button-container-2 input:checked ~ .checkmark-2:after {
+                                                                                                display: block; }
 
-                                                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000352}}
-                                                                                                .radio-button-container input:checked ~ .checkmark {
-                                                                                                  background-color: #bfe05a; }
+                                                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\checkbox\.scss}line{font-family:\0000368}}
+                                                                                                .checkmark-2-number {
+                                                                                                  position: absolute;
+                                                                                                  width: 79%;
+                                                                                                  display: flex;
+                                                                                                  justify-content: center;
+                                                                                                  left: 0;
+                                                                                                  top: 6px;
+                                                                                                  z-index: 10000; }
 
-                                                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000357}}
-                                                                                                  .checkmark:after {
-                                                                                                    content: "";
-                                                                                                    position: absolute;
-                                                                                                    display: none; }
+                                                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000314}}
+                                                                                                  .radio-button-container {
+                                                                                                    display: block;
+                                                                                                    position: relative;
+                                                                                                    padding-left: 35px;
+                                                                                                    margin-bottom: 12px;
+                                                                                                    padding-right: 15px;
+                                                                                                    cursor: pointer;
+                                                                                                    font-size: 22px;
+                                                                                                    -webkit-user-select: none;
+                                                                                                    user-select: none; }
 
-                                                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000364}}
-                                                                                                    .radio-button-container input:checked ~ .checkmark:after {
-                                                                                                      display: block; }
+                                                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000327}}
+                                                                                                    .radio-button-container input {
+                                                                                                      position: absolute;
+                                                                                                      opacity: 0;
+                                                                                                      cursor: pointer;
+                                                                                                      height: 0;
+                                                                                                      width: 0; }
 
-                                                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000369}}
-                                                                                                      .radio-button-container .checkmark:after {
-                                                                                                        top: 9px;
-                                                                                                        left: 9px;
-                                                                                                        width: 8px;
-                                                                                                        height: 8px;
-                                                                                                        border-radius: 50%;
-                                                                                                        background: white; }
+                                                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000336}}
+                                                                                                      .checkmark {
+                                                                                                        position: absolute;
+                                                                                                        top: 0;
+                                                                                                        left: 0;
+                                                                                                        height: 25px;
+                                                                                                        width: 25px;
+                                                                                                        background-color: #eee;
+                                                                                                        border-radius: 50%; }
 
-                                                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000314}}
-                                                                                                        .input-spacer {
-                                                                                                          padding-bottom: 15px; }
+                                                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000347}}
+                                                                                                        .radio-button-container:hover input ~ .checkmark {
+                                                                                                          background-color: #ccc; }
 
-                                                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000318}}
-                                                                                                          .input-spacer-right-50px {
-                                                                                                            padding-right: 50px; }
+                                                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000352}}
+                                                                                                          .radio-button-container input:checked ~ .checkmark {
+                                                                                                            background-color: #bfe05a; }
 
-                                                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000322}}
-                                                                                                            label {
-                                                                                                              margin-bottom: 5px; }
+                                                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000357}}
+                                                                                                            .checkmark:after {
+                                                                                                              content: "";
+                                                                                                              position: absolute;
+                                                                                                              display: none; }
 
-                                                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000326}}
-                                                                                                              input {
-                                                                                                                border-radius: 4px;
-                                                                                                                border: 1px solid #707070;
-                                                                                                                outline: none;
-                                                                                                                padding: 10px; }
+                                                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000364}}
+                                                                                                              .radio-button-container input:checked ~ .checkmark:after {
+                                                                                                                display: block; }
 
-                                                                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000333}}
-                                                                                                                .font-bold {
-                                                                                                                  font-weight: bold; }
+                                                                                                                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\radio-button\.scss}line{font-family:\0000369}}
+                                                                                                                .radio-button-container .checkmark:after {
+                                                                                                                  top: 9px;
+                                                                                                                  left: 9px;
+                                                                                                                  width: 8px;
+                                                                                                                  height: 8px;
+                                                                                                                  border-radius: 50%;
+                                                                                                                  background: white; }
 
-                                                                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000337}}
-                                                                                                                  .input-inline {
-                                                                                                                    display: flex;
-                                                                                                                    flex-flow: row; }
+                                                                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000314}}
+                                                                                                                  .input-spacer {
+                                                                                                                    padding-bottom: 15px; }
 
-                                                                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000342}}
-                                                                                                                    .input-container {
-                                                                                                                      display: flex;
-                                                                                                                      flex-flow: column; }
+                                                                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000318}}
+                                                                                                                    .input-spacer-right-50px {
+                                                                                                                      padding-right: 50px; }
+
+                                                                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000322}}
+                                                                                                                      label {
+                                                                                                                        margin-bottom: 5px; }
+
+                                                                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000326}}
+                                                                                                                        input {
+                                                                                                                          border-radius: 4px;
+                                                                                                                          border: 1px solid #707070;
+                                                                                                                          outline: none;
+                                                                                                                          padding: 10px; }
+
+                                                                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000333}}
+                                                                                                                          .font-bold {
+                                                                                                                            font-weight: bold; }
+
+                                                                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000337}}
+                                                                                                                            .input-inline {
+                                                                                                                              display: flex;
+                                                                                                                              flex-flow: row; }
+
+                                                                                                                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\input\.scss}line{font-family:\0000342}}
+                                                                                                                              .input-container {
+                                                                                                                                display: flex;
+                                                                                                                                flex-flow: column; }

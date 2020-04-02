@@ -8,8 +8,12 @@
     {% assets "scss_bundle" %}
         <link rel="stylesheet" href="{{ ASSET_URL }}" type="text/css">
     {% endassets %}
+    {% assets "js_bundle" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
 </head>
 <body>
+    {% block overlay %}{% endblock %}
     <div class="container">
         <div class="overlay"></div>
         <div class="row z-index-999">
