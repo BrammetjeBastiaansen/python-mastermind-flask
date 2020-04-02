@@ -44,5 +44,5 @@ class Game_Service:
         return sequence_colors
 
     @classmethod
-    def get_game_colors(cls, currentGame):
-        return currentGame.game_colors
+    def get_game_colors(cls, current_game):
+        return current_game.game_colors
