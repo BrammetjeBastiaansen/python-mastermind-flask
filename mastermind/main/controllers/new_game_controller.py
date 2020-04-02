@@ -8,6 +8,9 @@ class New_Game_Controller(MethodView):
         self._game_model = game_model
 
     def get(self):
+        if self._player_model.get_current_player is None:
+            return redirect(url_for("main_bp.index"))
+
         return render_template("create_new_game.html")
 
     def post(self):
