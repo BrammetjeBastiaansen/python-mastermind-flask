@@ -32,6 +32,7 @@ class Game(db.Model):
     played_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     cheats_used = db.Column(db.Boolean, default=False)
     is_finished = db.Column(db.Boolean, default=False)
+    has_won = db.Column(db.Boolean, default=False)
 
     player = db.relationship('Player', back_populates='games')
     game_colors = db.relationship('GameColor', back_populates='game')
