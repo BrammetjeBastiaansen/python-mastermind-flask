@@ -10,7 +10,8 @@ from mastermind.main.models.game_model import Game_Model
 
 main_bp = Blueprint('main_bp', __name__,
                     template_folder='templates',
-                    static_folder='static')
+                    static_folder='static',
+                    static_url_path='/main/static')
 
 # Models
 # We declare the models here and pass them to the our MethodView controller.

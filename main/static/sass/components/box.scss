@@ -1,0 +1,18 @@
+.box-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    background-color: #FEFEFE;
+    border-radius: 20px;
+    border: 1px solid #707070;
+    padding: 10px 20px 10px;
+    min-width: 500px;
+}
+
+.box-content {
+    padding-top: 25px;
+}

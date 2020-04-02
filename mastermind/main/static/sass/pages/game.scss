@@ -1,0 +1,70 @@
+.container-content {
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.border-container-title {
+    text-align: center;
+}
+
+.button-container {
+    justify-content: center;
+}
+
+div.color {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px 15px 10px;
+}
+
+div.red-color { background-color: #F90606; }
+div.blue-color { background-color: #2D1AD4; }
+div.green-color { background-color: #12F538; }
+div.yellow-color { background-color: #DEF512; }
+div.orange-color { background-color: #FFB507; }
+div.brown-color { background-color: #AC6F14; }
+
+div.color-slot {
+    border: 1px solid #989898;
+    margin: 0 10px;
+}
+
+.no-table-whitespace {
+    margin-bottom: -7px !important;
+}
+
+.guess-wrapper {
+    background-color: #EFEFEF;
+    border: 1px solid #70746E;
+    border-radius: 0.3em;
+    padding: 5px 0;
+}
+
+.first-guess {
+    background-color: inherit;
+}
+
+.answer {
+    background-color: #6EDC38;
+}
+
+.answer .color-slot {
+    background-color: white;
+}
+
+.hint-square {
+    border: 1px solid #70746E;
+    background-color: #6EDC38;
+    border-radius: 0.3em;
+    padding: 0 3px;
+}
+
+.hint-slot {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 0.15em;
+    background-color: white;
+}
