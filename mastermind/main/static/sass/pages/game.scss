@@ -89,11 +89,7 @@ div.color-slot {
     background-color: white;
 }
 
-.draggable-color:hover {
+.draggable-color:hover, .color-slot:hover, .hint-slot:hover {
     animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     cursor: pointer;
-}
-
-.color-slot:hover, .hint-slot:hover {
-    animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
