@@ -116,6 +116,16 @@
                                                     font-size: 12px;
                                                     font-weight: bold; }
 
+                                                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\000037}}
+                                                    @keyframes scale-up-center {
+                                                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\000037}}
+                                                      0% {
+                                                        transform: scale(1);   }
+                                                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\static\\sass\\base\\keyframes\.scss}line{font-family:\0000310}}
+                                                        100% {
+                                                          transform: scale(1.1);   }
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\useroverview\.scss}line{font-family:\000032}}
 th, td {
   padding-right: 25px; }
