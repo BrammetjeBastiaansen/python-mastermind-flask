@@ -31,7 +31,7 @@ class Game(db.Model):
     position_amount = db.Column(db.Integer, nullable=False)
     played_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     cheats_used = db.Column(db.Boolean, default=False)
-    answers_guessed_in_turns = db.Column(db.Integer, default=0)
+    is_finished = db.Column(db.Boolean, default=False)
 
     player = db.relationship('Player', back_populates='games')
     game_colors = db.relationship('GameColor', back_populates='game')
