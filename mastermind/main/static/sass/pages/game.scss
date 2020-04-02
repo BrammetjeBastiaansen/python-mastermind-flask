@@ -94,11 +94,32 @@ div.color-slot {
     cursor: pointer;
 }
 
-* {
-    background-color: blue;
-}
-
 p.large-green-text {
     color: #6EDC38;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+p.modal-text {
     font-size: 2em;
+    font-weight: bold;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999
+}
+
+.modal {
+    z-index: 999999;
+    display: block;
+    padding-right: 17px;
+}
+
+.modal-dialog-centered {
+    border-radius: 2em;
 }

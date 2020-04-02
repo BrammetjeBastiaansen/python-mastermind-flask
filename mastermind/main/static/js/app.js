@@ -6,5 +6,3 @@ function includeJs(jsFilePath) {
 
     document.querySelector("head").appendChild(js);
 }
-
-includeJs("main/static/js/bootstrap/modal.js");
