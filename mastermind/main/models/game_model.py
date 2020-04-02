@@ -6,7 +6,6 @@ from random import shuffle, choices
 
 class Game_Model:
     def __init__(self):
-        db.create_all()
         self._current_game = None
 
     @property
