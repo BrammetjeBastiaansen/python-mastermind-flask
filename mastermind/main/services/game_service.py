@@ -2,7 +2,7 @@ from mastermind.database.models import Game, Color, GameColor, db
 import sqlalchemy as sa
 
 import datetime
-from random import shuffle, choices
+from random import shuffle, choices, sample
 
 
 class Game_Service:
@@ -24,25 +24,23 @@ class Game_Service:
         return game
 
     @classmethod
-    def create_game_sequence(cls, game_id, amount_of_colors, position_amount):
-        # TODO This will always get double colors
+    def create_game_sequence(cls, game, amount_of_colors, position_amount):
         game_colors = Color.query.limit(amount_of_colors).all()
         color_ids = []
 
         for game_color in game_colors:
             color_ids.append(game_color.id)
 
-        sequence_ids = choices(color_ids, k=position_amount)
+        sequence_ids = choices(color_ids, k=position_amount) \
+            if game.double_colors_allowed \
+            else sample(color_ids, k=position_amount)
+
         sequence_colors = []
 
         for sequence_id in sequence_ids:
-            sequence_color = GameColor(game_id=game_id, color_id=sequence_id)
+            sequence_color = GameColor(game_id=game.id, color_id=sequence_id)
             sequence_colors.append(sequence_color)
             db.session.add(sequence_color)
 
         db.session.commit()
-        return sequence_colors
-
-    @classmethod
-    def get_game_colors(cls, current_game):
-        return current_game.game_colors
+        return sequence_colors, game_colors

@@ -34,13 +34,9 @@
                     Colors
                 </div>
                 <div class="colors">
-<!--                    TODO: Make dynamic-->
-                    <div class="color draggable-color red-color"></div>
-                    <div class="color draggable-color blue-color"></div>
-                    <div class="color draggable-color green-color"></div>
-                    <div class="color draggable-color yellow-color"></div>
-                    <div class="color draggable-color orange-color"></div>
-                    <div class="color draggable-color brown-color"></div>
+                    {% for item in game_sequence %}
+                        <div class="color draggable-color {{ item.name.lower() }}"></div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="button-container">
