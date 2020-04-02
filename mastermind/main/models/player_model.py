@@ -1,7 +1,3 @@
-from mastermind.database.models import Player, Game, db
-import sqlalchemy as sa
-
-
 class Player_Model:
 
     def __init__(self, player_service):

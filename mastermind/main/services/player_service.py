@@ -18,6 +18,7 @@ class Player_Service:
 
     @classmethod
     def get_played_game_amounts_by_date(cls, player_id):
+        print(db.session.query(sa.func.date(Game.played_on).label("date"), sa.func.count(Game.id).label("amount")).filter_by(player_id=player_id).group_by(sa.func.date(Game.played_on)).all())
         return db.session.query(sa.func.date(Game.played_on).label("date"), sa.func.count(Game.id).label("amount")).filter_by(player_id=player_id).group_by(sa.func.date(Game.played_on)).all()
 
     @classmethod

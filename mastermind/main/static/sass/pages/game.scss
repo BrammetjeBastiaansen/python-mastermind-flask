@@ -29,12 +29,17 @@ div.color {
     text-align: center;
 }
 
-div.red-color { background-color: $red; }
-div.blue-color { background-color: $navyblue; }
-div.green-color { background-color: $lightgreen; }
-div.yellow-color { background-color: $yellow; }
-div.orange-color { background-color: $orange; }
-div.brown-color { background-color: $brown; }
+div.red { background-color: $red; }
+div.blue { background-color: $navyblue; }
+div.green { background-color: $lightgreen; }
+div.yellow { background-color: $yellow; }
+div.orange { background-color: $orange; }
+div.cyan { background-color: $cyan; }
+div.pink { background-color: $pink; }
+div.brown { background-color: $brown; }
+div.darkred { background-color: $darkred; }
+div.purple { background-color: $purple; }
+
 
 div.color-slot {
     border: 1px solid $borderColor;
