@@ -42,11 +42,20 @@ div.purple { background-color: $purple; }
 
 
 div.color-slot {
+    position: relative;
     border: 1px solid $borderColor;
     margin: 0 2px;
     height: 40px;
     width: 40px;
     background-color: $white;
+
+    .draggable-color {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -11px;
+        top: -1px;
+    }
 }
 
 .no-table-whitespace {
@@ -92,6 +101,10 @@ div.color-slot {
     margin: 5px;
     border-radius: 0.15em;
     background-color: white;
+}
+
+.draggable-color {
+    border: 1px solid $borderColor;
 }
 
 .draggable-color:hover, .color-slot:hover, .hint-slot:hover {
