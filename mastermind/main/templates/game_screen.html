@@ -26,6 +26,10 @@
     {% endif %}
 {% endblock %}
 
+{% block outside_box_class %}
+    col-md-4
+{%  endblock %}
+
 {% block side_bar %}
     <div class="box-content mr-4 ml-4">
         <div class="border-container">
@@ -53,22 +57,18 @@
     <div class="container-content full-width">
         {% for n in range(13) %}
             <div class="row margin-bottom-5px">
-                <div class="col-md-10">
+                <div class="col-md-9">
                     <div class="guess-wrapper {{ 'green' if n == 12 }}">
-<!--                        TODO: Make dynamic-->
+                    {% for n in range(amount_of_pins) %}
                         <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
-                        <div class="color color-slot"></div>
+                    {% endfor %}
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="hint-square">
-<!--                        TODO: Make dynamic-->
+                    {% for n in range(amount_of_pins) %}
                         <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
-                        <div class="hint-slot"></div>
+                    {% endfor %}
                     </div>
                 </div>
             </div>
