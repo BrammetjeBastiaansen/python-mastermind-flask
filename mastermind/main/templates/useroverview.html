@@ -51,20 +51,18 @@
                 </tbody>
             </table>
         {% else %}
-            <p class="text-center pb-3">{{ player.name }} heeft nog geen potjes gespeeld.</p>
+            <h3 class="my-4 text-center">{{ player.name }} heeft nog geen potjes gespeeld.</h3>
         {% endif %}
-
-        <div class="text-right">
-            <button>
-                <a href="{{ url_for('main_bp.create') }}" class="green-btn">Create a new game</a>
-            </button>
-        </div>
     {% else %}
-        <div class="text-center">
-            <h3 class="mt-4 mb-3">Could not find player</h3>
-            <button>
-                <a href="{{ url_for('main_bp.users_overview') }}" class="green-btn">Return to player overview</a>
-            </button>
-        </div>
+        <h3 class="my-4 text-center">Deze speler bestaat niet</h3>
     {% endif %}
+
+    <div class="button-container">
+        <button>
+            <a href="{{ url_for('main_bp.users_overview') }}" class="green-btn">Return to all players</a>
+        </button>
+        <button>
+            <a href="{{ url_for('main_bp.index') }}" class="green-btn">Start playing</a>
+        </button>
+    </div>
 {% endblock %}
