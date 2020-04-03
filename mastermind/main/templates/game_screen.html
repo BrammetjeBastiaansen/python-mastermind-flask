@@ -1,28 +1,33 @@
 {% extends "game.html" %}
 
 {% block overlay %}
-    <!-- TODO: make dynamic. Before loading the page, check if the player has won and send boolean to page -->
-    {% if False %}
-    <div class="modal-overlay"></div>
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h2 class="modal-title text-center mb-4 fat">WE HAVE A WINNER!</h2>
-                    <p class="text-center modal-text">You cracked the code in:</p>
-                    <p class="text-center my-4 large-green-text">4 tries!</p>
-                </div>
-                <div class="text-right p-3">
-                    <button>
-                        <a href="{{ url_for('main_bp.create') }}">Go to statistics</a>
-                    </button>
-                    <button>
-                        <a href="{{ url_for('main_bp.users_overview') }}">Play again</a>
-                    </button>
+    <!-- TODO: send boolean game_won to this page when the game has ended -->
+    {% if game_won is defined %}
+        <div class="modal-overlay"></div>
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        {% if game_won %}
+                            <h2 class="modal-title text-center mb-4 fat">WE HAVE A WINNER!</h2>
+                            <p class="text-center modal-text">You cracked the code in:</p>
+                            <p class="text-center my-4 large-green-text">4 tries!</p>
+                        {% else %}
+                            <h2 class="modal-title text-center mb-4 fat">Game Over</h2>
+                            <p class="text-center modal-text-smaller">You were not able to crack the code</p>
+                        {% endif %}
+                    </div>
+                    <div class="text-right p-3">
+                        <button>
+                            <a href="{{ url_for('main_bp.create') }}">Go to statistics</a>
+                        </button>
+                        <button>
+                            <a href="{{ url_for('main_bp.users_overview') }}">Play again</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     {% endif %}
 {% endblock %}
 
