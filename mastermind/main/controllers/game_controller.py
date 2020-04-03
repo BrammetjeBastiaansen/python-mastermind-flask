@@ -11,8 +11,6 @@ class Game_Controller(MethodView):
         if self._player_model.get_current_player is None:
             return redirect(url_for("main_bp.index"))
 
-        print(self._game_model.current_game.position_amount)
-            
         return render_template("game_screen.html",
                                game_sequence=self._game_model.game_colors,
                                amount_of_pins=self._game_model.current_game.position_amount)
