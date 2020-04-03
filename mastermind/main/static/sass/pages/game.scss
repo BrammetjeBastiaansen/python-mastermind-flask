@@ -28,19 +28,27 @@ div.color {
 
 .colors {
     text-align: center;
+    width: 220px;
+
+    input {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 10px 15px 10px;
+    }
 }
 
-div.red { background-color: $red; }
-div.blue { background-color: $navyblue; }
-div.green { background-color: $lightgreen; }
-div.yellow { background-color: $yellow; }
-div.orange { background-color: $orange; }
-div.cyan { background-color: $cyan; }
-div.pink { background-color: $pink; }
-div.brown { background-color: $brown; }
-div.darkred { background-color: $darkred; }
-div.purple { background-color: $purple; }
-
+.red { background-color: $red; }
+.blue { background-color: $navyblue; }
+.green { background-color: $lightgreen; }
+.yellow { background-color: $yellow; }
+.orange { background-color: $orange; }
+.cyan { background-color: $cyan; }
+.pink { background-color: $pink; }
+.brown { background-color: $brown; }
+.darkred { background-color: $darkred; }
+.purple { background-color: $purple; }
 
 div.color-slot {
     position: relative;
@@ -54,8 +62,9 @@ div.color-slot {
         width: 40px;
         height: 40px;
         position: absolute;
-        left: -11px;
+        left: -1px;
         top: -1px;
+        border-radius: 50%;
     }
 }
 
@@ -70,7 +79,7 @@ div.color-slot {
     background-color: $white;
     border: 1px solid $borderColor;
     border-radius: 0.3em;
-    padding: 5px 0;
+    padding: 5px 15px;
     height: 100%;
 }
 
@@ -93,6 +102,7 @@ div.color-slot {
     border: 1px solid $borderColor;
     background-color: $lightgreen;
     border-radius: 0.3em;
+    max-width: 150px;
 }
 
 .hint-slot {
@@ -145,4 +155,9 @@ p.modal-text {
 
 .min-width-630px {
     width: 630px;
+}
+
+.guess-row {
+    display: flex;
+    justify-content: space-between;
 }

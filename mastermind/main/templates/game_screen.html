@@ -31,54 +31,57 @@
 {%  endblock %}
 
 {% block main %}
-    <div class="box-content mr-4 ml-4">
-        <div class="title full-width mb-4">
-            <h1><span class="fat">Master</span><span class="thin">mind</span></h1>
-            <h5 class="sub-title">Made by: Cees Melis and Bram Bastiaansen</h5>
-        </div>
-        <div class="border-container">
-            <div class="border-container-content mb-2">
-                <div class="border-container-title font-bold mb-3">
-                    Colors
-                </div>
-                <div class="colors">
-                    {% for item in game_sequence %}
-                        <div class="color draggable-color draggable {{ item.name.lower() }}" draggable="true" value="{{ item.id }}"></div>
-                    {% endfor %}
-                </div>
-            </div>
-            <div class="button-container">
-                <button>
-                    <a class="px-3 mx-auto">Apply Code</a>
-                </button>
-            </div>
-            <div class="position-relative">
-                <div class="dragZone">
 
+    <form class="d-flex" method="POST" action="{{ url_for('main_bp.game') }}">
+        <div class="box-content mr-3 ml-3">
+            <div class="title full-width mb-4">
+                <h1><span class="fat">Master</span><span class="thin">mind</span></h1>
+                <h5 class="sub-title">Made by: Cees Melis and Bram Bastiaansen</h5>
+            </div>
+            <div class="border-container">
+                <div class="border-container-content mb-2">
+                    <div class="border-container-title font-bold mb-3">
+                        Colors
+                    </div>
+                    <div class="colors">
+                        {% for item in game_sequence %}
+                            <input class="color draggable-color draggable {{ item.name.lower() }}" draggable="true" name="draggable" disabled />
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button>
+                        <a class="px-3 mx-auto">Apply Code</a>
+                    </button>
+                </div>
+                <div class="position-relative">
+                    <div class="dragZone">
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-8 container-content full-width">
-        {% for n in range(13) %}
-            <div class="row margin-bottom-5px">
-                <div class="col-md-9">
-                    <div class="guess-wrapper {{ 'green' if n == 12 }}">
-                    {% for n in range(amount_of_pins) %}
-<!--                        TODO: Add disabled attribute to div based on current attempt.-->
-                        <div class="color color-slot dropZone" disabled="false"></div>
-                    {% endfor %}
+        <div class="container-content full-width">
+            {% for n in range(13) %}
+                <div class="guess-row margin-bottom-5px">
+                    <div>
+                        <div class="guess-wrapper {{ 'green' if n == 12 }}">
+                        {% for n in range(amount_of_pins) %}
+    <!--                        TODO: Add disabled attribute to div based on current attempt.-->
+                            <div class="color color-slot dropZone" disabled="false"></div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <div>
+                        <div class="hint-square">
+                        {% for n in range(amount_of_pins) %}
+                            <div class="hint-slot"></div>
+                        {% endfor %}
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="hint-square">
-                    {% for n in range(amount_of_pins) %}
-                        <div class="hint-slot"></div>
-                    {% endfor %}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+            {% endfor %}
+        </div>
+    </form>
 
 {% endblock %}

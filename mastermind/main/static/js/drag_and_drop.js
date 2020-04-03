@@ -155,6 +155,9 @@
             if(e.target.attributes.disabled.value !== "false") {
                 return;
             }
+            // TODO: SET VALUE
+            console.log(this.element);
+
             e.target.append(this.element);
             this.audio.play();
         }
@@ -165,6 +168,7 @@
                 this.dragZone.classList.remove("drag-zone-delete");
             } else {
                 this.colors_container.append(this.element)
+                // TODO: RESET value
             }
         }
 

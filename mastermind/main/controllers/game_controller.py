@@ -23,4 +23,7 @@ class Game_Controller(MethodView):
                                amount_of_pins=self._game_model.current_game.position_amount)
 
     def post(self):
-        pass
+        print(request.form)
+
+        # TODO: Pass data to redirect to show previous attempts on game screen.
+        return redirect(url_for("main_bp.game"))
