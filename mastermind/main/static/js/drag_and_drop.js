@@ -6,6 +6,9 @@
         this.element = null;
         this.dragZones = [];
         this.dragStarted = false;
+        this.double_colors_enabled = false;
+
+        fetch("/api/double_colors_enabled").then(data => data.json()).then(data => this.double_colors_enabled = data.double_colors_enabled)
 
         /**
          * Get draggable nodes
@@ -107,8 +110,13 @@
         if(e.target.parentElement.classList.contains("dropZone")) {
             this.element = e.target;
         } else {
-            this.element = e.target.cloneNode(true);
-            this._applyDraggableEvents(this.element);
+            console.log(this.double_colors_enabled);
+            if(this.double_colors_enabled) {
+                this.element = e.target.cloneNode(true);
+                this._applyDraggableEvents(this.element);
+            } else {
+                this.element = e.target;
+            }
         }
         e.dataTransfer.setData("text", e.target.id);
 
