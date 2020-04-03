@@ -4,7 +4,6 @@
      */
     constructor() {
         this.element = null;
-        this.dragZones = [];
         this.dragStarted = false;
         this.double_colors_enabled = false;
 
@@ -23,6 +22,14 @@
         this.dropZoneNodes = document.querySelectorAll(".dropZone");
 
         /**
+         * Get dragZone node
+         * @type {Element}
+         */
+        this.dragZone = document.querySelector(".dragZone")
+
+        this.colors_container = document.querySelector(".colors");
+
+        /**
          * Add event listeners to draggable nodes
          */
         this.draggableNodes.forEach(node => {
@@ -35,6 +42,11 @@
         this.dropZoneNodes.forEach(node => {
             this._applyDropZoneEvents(node);
         });
+
+        /**
+         * Add event listener to dragZone
+         */
+        this._applyDropZoneEvents(this.dragZone);
 
         /**
          * Audio that will be played whenever a drop occurs.
@@ -71,9 +83,7 @@
      */
     _dragOver(e) {
         e.preventDefault();
-        for(const dragZone of this.dragZones) {
-            dragZone.classList.add("drag-zone-delete");
-        }
+        this.dragZone.classList.add("drag-zone-delete");
     }
 
     /**
@@ -120,9 +130,7 @@
         }
         e.dataTransfer.setData("text", e.target.id);
 
-        for(const dragZone of this.dragZones) {
-            dragZone.classList.add("drag-zone-delete");
-        }
+        this.dragZone.classList.add("drag-zone-delete");
     }
 
     /**
@@ -131,9 +139,7 @@
      * @private
      */
     _dragEnd() {
-        for(const dragZone of this.dragZones) {
-            dragZone.classList.remove("drag-zone-delete");
-        }
+        this.dragZone.classList.remove("drag-zone-delete");
         this.dragStarted = false;
     }
 
@@ -154,10 +160,11 @@
         }
 
         if(e.target.classList.contains("dragZone") && this.element !== null) {
-            this.element.remove();
-
-            for(const dragZone of this.dragZones) {
-                dragZone.classList.remove("drag-zone-delete");
+            if(this.double_colors_enabled) {
+                this.element.remove();
+                this.dragZone.classList.remove("drag-zone-delete");
+            } else {
+                this.colors_container.append(this.element)
             }
         }
 

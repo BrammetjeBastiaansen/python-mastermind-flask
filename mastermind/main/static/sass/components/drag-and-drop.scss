@@ -4,9 +4,8 @@
   align-items: center;
   text-align: center;
   height: 80px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  margin-top: 10px;
 
   &::after {
     content: "";
