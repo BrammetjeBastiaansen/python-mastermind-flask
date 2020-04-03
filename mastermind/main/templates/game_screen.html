@@ -38,7 +38,7 @@
                     Colors
                 </div>
                 <div class="colors">
-                    {% for item in game_sequence %}
+                    {% for item in game_colors %}
                         <div class="color draggable-color draggable {{ item.name.lower() }}" draggable="true" value="{{ item.id }}"></div>
                     {% endfor %}
                 </div>
@@ -60,10 +60,10 @@
 
 {% block main %}
     <div class="container-content full-width">
-        {% for n in range(13) %}
+        {% for n in range(12) %}
             <div class="row margin-bottom-5px">
                 <div class="col-md-9">
-                    <div class="guess-wrapper {{ 'green' if n == 12 }}">
+                    <div class="guess-wrapper">
                     {% for n in range(amount_of_pins) %}
 <!--                        TODO: Add disabled attribute to div based on current attempt.-->
                         <div class="color color-slot dropZone" disabled="false"></div>
@@ -79,6 +79,22 @@
                 </div>
             </div>
         {% endfor %}
+        <div class="row margin-bottom-5px">
+            <div class="col-md-9">
+                <div class="guess-wrapper lightergreen">
+                    {% if cheat_enabled %}
+                        {% for game_color in game_sequence %}
+                            <div class="color color-slot" disabled="false">
+                                <div class="color draggable-color draggable {{ game_color.color.name.lower() }}"></div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        {% for _ in range(amount_of_pins) %}
+                            <div class="color color-slot" disabled="false"></div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
     </div>
-
 {% endblock %}
