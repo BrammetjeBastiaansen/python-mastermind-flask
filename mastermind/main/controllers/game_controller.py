@@ -19,9 +19,11 @@ class Game_Controller(MethodView):
             return redirect(url_for("main_bp.new_game"))
 
         return render_template("game_screen.html",
-                               game_sequence=self._game_model.game_colors,
-                               amount_of_pins=self._game_model.current_game.position_amount,
-                               player_name=self._player_model.get_current_player.name)
+            game_sequence=self._game_model.game_colors,
+            amount_of_pins=self._game_model.current_game.position_amount,
+            player_name=self._player_model.get_current_player.name,
+            cheat_enabled=self._game_model.current_game.cheats_used,
+            game_colors=self._game_model.game_colors)
 
     def post(self):
         pass
