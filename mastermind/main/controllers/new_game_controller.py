@@ -16,12 +16,15 @@ class New_Game_Controller(MethodView):
     def post(self):
         request_data = request.form
 
-        double_color_allowed = int(request_data["doubleColorOption"]) == 1
+        double_colors_allowed = int(request_data["doubleColorOption"]) == 1
         cheat_mode_allowed = int(request_data["cheatModeOption"]) == 1
         amount_of_colors = int(request_data["amountOfColorsOption"])
         amount_of_pins = int(request_data["amountOfPins"])
 
-        self._game_model.create_new_game(self._player_model.get_current_player.id, double_color_allowed,
+        if not double_colors_allowed and amount_of_colors < amount_of_pins:
+            return redirect(url_for("main_bp.new_game"))
+
+        self._game_model.create_new_game(self._player_model.get_current_player.id, double_colors_allowed,
                                          cheat_mode_allowed, amount_of_colors, amount_of_pins)
 
         return redirect(url_for("main_bp.game"))
