@@ -27,11 +27,15 @@
 {% endblock %}
 
 {% block outside_box_class %}
-    min-width-630px
+    full-width
 {%  endblock %}
 
-{% block side_bar %}
+{% block main %}
     <div class="box-content mr-4 ml-4">
+        <div class="title full-width">
+            <h1><span class="fat">Master</span><span class="thin">mind</span></h1>
+            <h5 class="sub-title">Made by: Cees Melis and Bram Bastiaansen</h5>
+        </div>
         <div class="border-container">
             <div class="border-container-content mb-2">
                 <div class="border-container-title font-bold mb-3">
@@ -55,11 +59,7 @@
             </div>
         </div>
     </div>
-
-{% endblock %}
-
-{% block main %}
-    <div class="container-content full-width">
+    <div class="col-md-8 container-content full-width">
         {% for n in range(13) %}
             <div class="row margin-bottom-5px">
                 <div class="col-md-9">

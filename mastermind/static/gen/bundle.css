@@ -390,7 +390,7 @@ th, td {
                                                     background-color: #FEFEFE;
                                                     border-radius: 20px;
                                                     border: 1px solid #707070;
-                                                    padding: 10px 20px 10px;
+                                                    padding: 10px 45px 10px 20px;
                                                     min-width: 500px; }
 
                                                     @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\box\.scss}line{font-family:\0000326}}
