@@ -20,7 +20,8 @@ class Game_Controller(MethodView):
 
         return render_template("game_screen.html",
                                game_sequence=self._game_model.game_colors,
-                               amount_of_pins=self._game_model.current_game.position_amount)
+                               amount_of_pins=self._game_model.current_game.position_amount,
+                               player_name=self._player_model.get_current_player.name)
 
     def post(self):
         pass
