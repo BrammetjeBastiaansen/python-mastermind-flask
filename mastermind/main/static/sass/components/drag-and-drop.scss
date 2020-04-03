@@ -1,0 +1,34 @@
+.dragZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-bottom: 0;
+    color: $white;
+    font-weight: bold;
+    user-select: none;
+    user-focus: none;
+  }
+}
+
+.drag-zone-delete {
+  background-color: rgba(255, 0, 0, 0.7);
+
+  &::after {
+    content: "Remove / exit";
+    display: block;
+    margin-bottom: 0;
+    color: $white;
+    font-weight: bold;
+    user-select: none;
+    user-focus: none;
+  }
+}

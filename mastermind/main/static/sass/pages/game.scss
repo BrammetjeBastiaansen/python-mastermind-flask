@@ -42,11 +42,20 @@ div.purple { background-color: $purple; }
 
 
 div.color-slot {
+    position: relative;
     border: 1px solid $borderColor;
     margin: 0 2px;
     height: 40px;
     width: 40px;
     background-color: $white;
+
+    .draggable-color {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -11px;
+        top: -1px;
+    }
 }
 
 .no-table-whitespace {
@@ -94,6 +103,10 @@ div.color-slot {
     background-color: white;
 }
 
+.draggable-color {
+    border: 1px solid $borderColor;
+}
+
 .draggable-color:hover, .color-slot:hover, .hint-slot:hover {
     animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     cursor: pointer;
@@ -127,4 +140,8 @@ p.modal-text {
 
 .modal-dialog-centered {
     border-radius: 2em;
+}
+
+.min-width-630px {
+    width: 630px;
 }
