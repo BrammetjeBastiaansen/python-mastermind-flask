@@ -60,7 +60,7 @@ class Game_Service:
 
     @classmethod
     def get_pin(cls, name):
-        return Pin.query.filter(name).first()
+        return Pin.query.filter_by(name=name).first()
 
     @classmethod
     def get_games_most_recent_attempt(cls, game):
