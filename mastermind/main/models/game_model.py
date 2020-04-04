@@ -48,6 +48,9 @@ class Game_Model:
     def create_attempt(self, dragged_colors):
         return self._game_service.create_attempt(self._current_game.id, dragged_colors)
 
+    def get_game_attempts(self):
+        return self._game_service.get_game_attempts(self._current_game)
+
     def __create_random_sequence_for_game(self, game, amount_of_colors, position_amount):
         self.game_sequence, self._colors = self._game_service.create_game_sequence(game, amount_of_colors, position_amount)
 
@@ -98,7 +101,6 @@ class Game_Model:
         # If 12 attempts have already been made, return the has_won boolean
         # Also return all pins
         return None if not has_won and self._game_service.get_game_attempt_amount(self._current_game) < 12 else has_won, pins
-
 
     def __set_pins_for_attempt_and_check_win(self, attempt, pins):
         return self._game_service.set_pins_for_attempt_and_check_win(attempt, pins)

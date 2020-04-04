@@ -70,6 +70,10 @@ class Game_Service:
         return db.session.query(Attempt).filter_by(game_id=game.id).count()
 
     @classmethod
+    def get_game_attempts(cls, game):
+        return db.session.query(Attempt).filter_by(game_id=game.id).all()
+
+    @classmethod
     def create_attempt(cls, game_id, dragged_colors):
         attempt = Attempt(game_id=game_id)
         db.session.add(attempt)
@@ -81,3 +85,5 @@ class Game_Service:
             db.session.add(AttemptColor(attempt_id=attempt.id, color_id=color_id))
 
         db.session.commit()
+
+        return attempt
