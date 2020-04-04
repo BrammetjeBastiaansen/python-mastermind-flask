@@ -175,6 +175,16 @@ p.modal-text-smaller {
     justify-content: space-between;
 }
 
+.guess-row-center {
+    display: flex;
+    justify-content: center;
+}
+
+div.modal-content {
+    border-radius: 20px;
+    box-shadow: $shadow;
+}
+
 .active {
     background-color: $babyblue;
 }

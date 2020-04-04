@@ -63,6 +63,9 @@ class Game_Model:
     def __create_random_sequence_for_game(self, game, amount_of_colors, position_amount):
         self._game_sequence, self._colors = self._game_service.create_game_sequence(game, amount_of_colors, position_amount)
 
+    def get_current_game_sequence(self):
+        return self._game_service.get_games_sequence(self._current_game)
+
     def set_pins_and_check_win(self):
         has_won = True
 

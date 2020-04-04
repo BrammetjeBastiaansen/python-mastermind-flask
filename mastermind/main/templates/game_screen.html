@@ -4,17 +4,27 @@
     {% if has_won is not none %}
         <div class="modal-overlay"></div>
         <div class="modal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
                         {% if has_won %}
-                            <h2 class="modal-title text-center mb-4 fat">WE HAVE A WINNER!</h2>
+                            <h2 class="modal-title text-center mb-2 fat">WE HAVE A WINNER!</h2>
                             <p class="text-center modal-text">You cracked the code in:</p>
                             <p class="text-center my-4 large-green-text">{{ attempts|length }} {{ "try" if attempts|length == 1 else "tries" }}!</p>
                         {% else %}
-                            <h2 class="modal-title text-center mb-4 fat">Game Over</h2>
+                            <h2 class="modal-title text-center mb-2 fat">Game Over</h2>
                             <p class="text-center modal-text-smaller">You were not able to crack the code</p>
                         {% endif %}
+                            <p class="text-center">The correct sequence was:</p>
+                            <div class="guess-row-center">
+                                <div class="guess-wrapper lightergreen">
+                                    {% for game_color in game_sequence %}
+                                        <div class="color color-slot no-events" disabled draggable="false">
+                                            <div class="color draggable-color no-events {{ game_color.color.name.lower() }}" disabled draggable="false"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
                     </div>
                     <div class="text-right p-3">
                         <button>
@@ -101,17 +111,17 @@
             {% endfor %}
            <div class="guess-row margin-bottom-5px">
                <div class="guess-wrapper lightergreen">
-                 {% if cheat_enabled %}
-                     {% for game_color in game_sequence %}
+                   {% if cheat_enabled %}
+                        {% for game_color in game_sequence %}
                             <div class="color color-slot no-events" disabled draggable="false">
                                <div class="color draggable-color no-events {{ game_color.color.name.lower() }}" disabled draggable="false"></div>
                             </div>
                       {% endfor %}
-                    {% else %}
+                   {% else %}
                       {% for _ in range(amount_of_pins) %}
                             <div class="color color-slot" disabled></div>
                         {% endfor %}
-                 {% endif %}
+                   {% endif %}
                 </div>
             </div>
         </div>
