@@ -1,4 +1,4 @@
-from mastermind.database.models import Game, Color, GameColor, db
+from mastermind.database.models import *
 import sqlalchemy as sa
 
 import datetime
@@ -23,6 +23,7 @@ class Game_Service:
 
         return game
 
+
     @classmethod
     def create_game_sequence(cls, game, amount_of_colors, position_amount):
         game_colors = Color.query.limit(amount_of_colors).all()
@@ -44,3 +45,27 @@ class Game_Service:
 
         db.session.commit()
         return sequence_colors, game_colors
+
+
+    @classmethod
+    def set_pins_for_games_most_recent_attempt(cls, game, pins):
+        attempt = cls.get_games_most_recent_attempt(game)
+
+        for pin in pins:
+            attempt_pin = AttemptPin(attempt_id=attempt.id, pin_id=pin.id)
+            db.session.add(attempt_pin)
+
+        db.session.commit()
+
+
+    @classmethod
+    def get_pin(cls, name):
+        return Pin.query.filter_by(name=name).first()
+
+    @classmethod
+    def get_games_most_recent_attempt(cls, game):
+        return db.session.query(Attempt).filter_by(game_id=game.id).order_by(Attempt.id.desc()).first()
+
+    @classmethod
+    def get_game_attempt_amount(cls, game):
+        return db.session.query(Attempt).filter_by(game_id=game.id).count()
