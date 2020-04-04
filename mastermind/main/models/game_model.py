@@ -67,7 +67,7 @@ class Game_Model:
         has_won = True
 
         # Get all pins
-        black_pin = self._game_service.get_pin("Black")
+        pink_pin = self._game_service.get_pin("Pink")
         white_pin = self._game_service.get_pin("White")
         no_pin = self._game_service.get_pin("None")
 
@@ -77,13 +77,13 @@ class Game_Model:
         
         pins = []
 
-        # Check for black pins
+        # Check for pink pins
         i = 0
         while i < len(attempt_color_ids):
             if attempt_color_ids[i] == sequence_color_ids[i]:
                 del attempt_color_ids[i]
                 del sequence_color_ids[i]
-                pins.append(black_pin)
+                pins.append(pink_pin)
             else:
                 has_won = False
                 i += 1
@@ -101,9 +101,6 @@ class Game_Model:
         # Check for no pins
         for _ in range(len(attempt_color_ids)):
             pins.append(no_pin)
-
-        # Randomize the pins list
-        shuffle(pins)
 
         self._game_service.set_pins_for_games_most_recent_attempt(self.current_game, pins)
 

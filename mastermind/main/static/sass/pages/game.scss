@@ -111,7 +111,14 @@ div.color-slot {
     height: 17px;
     margin: 5px;
     border-radius: 0.15em;
-    background-color: white;
+}
+
+.hint-slot-pink {
+    background-color: $pink;
+}
+
+.hint-slot-white {
+    background-color: $white;
 }
 
 .draggable-color {

@@ -1,7 +1,6 @@
 {% extends "game.html" %}
 
 {% block overlay %}
-    <!-- TODO: send boolean game_won to this page when the game has ended -->
     {% if has_won is not none %}
         <div class="modal-overlay"></div>
         <div class="modal" tabindex="-1" role="dialog">
@@ -11,8 +10,7 @@
                         {% if has_won %}
                             <h2 class="modal-title text-center mb-4 fat">WE HAVE A WINNER!</h2>
                             <p class="text-center modal-text">You cracked the code in:</p>
-                            <!-- TODO: add attempt count -->
-                            <p class="text-center my-4 large-green-text">TODO tries!</p>
+                            <p class="text-center my-4 large-green-text">{{ attempts|length }} {{ "try" if attempts|length == 1 else "tries" }}!</p>
                         {% else %}
                             <h2 class="modal-title text-center mb-4 fat">Game Over</h2>
                             <p class="text-center modal-text-smaller">You were not able to crack the code</p>
@@ -20,10 +18,10 @@
                     </div>
                     <div class="text-right p-3">
                         <button>
-                            <a href="{{ url_for('main_bp.create') }}">Go to statistics</a>
+                            <a href="{{ url_for('main_bp.users_overview') }}">Go to statistics</a>
                         </button>
                         <button>
-                            <a href="{{ url_for('main_bp.users_overview') }}">Play again</a>
+                            <a href="{{ url_for('main_bp.create') }}">Play again</a>
                         </button>
                     </div>
                 </div>
@@ -83,8 +81,8 @@
                     <div>
                         <div class="hint-square">
 <!--                            TODO: Place pins-->
-                        {% for n in range(amount_of_pins) %}
-                            <div class="hint-slot"></div>
+                        {% for attempt_pin in attempt.attempt_pins %}
+                            <div class="hint-slot hint-slot-{{ attempt_pin.pin.color.lower() }}"></div>
                         {% endfor %}
                         </div>
                     </div>
@@ -97,13 +95,6 @@
                         {% for n in range(amount_of_pins) %}
     <!--                        TODO: Add disabled attribute to div based on current attempt.-->
                             <div class="color color-slot {{ 'dropZone' if attempt == 0 }}" disabled="false"></div>
-                        {% endfor %}
-                        </div>
-                    </div>
-                    <div>
-                        <div class="hint-square">
-                        {% for n in range(amount_of_pins) %}
-                            <div class="hint-slot"></div>
                         {% endfor %}
                         </div>
                     </div>
