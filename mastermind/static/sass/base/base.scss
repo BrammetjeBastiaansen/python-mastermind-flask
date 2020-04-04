@@ -76,3 +76,8 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+
+.no-events {
+    pointer-events: none;
+    user-select: none;
+}

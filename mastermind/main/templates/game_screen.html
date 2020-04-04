@@ -91,13 +91,13 @@
                <div class="guess-wrapper lightergreen">
                  {% if cheat_enabled %}
                      {% for game_color in game_sequence %}
-                            <div class="color color-slot" disabled="false">
-                               <div class="color draggable-color draggable {{ game_color.color.name.lower() }}"></div>
+                            <div class="color color-slot no-events" disabled draggable="false">
+                               <div class="color draggable-color no-events {{ game_color.color.name.lower() }}" disabled draggable="false"></div>
                             </div>
                       {% endfor %}
                     {% else %}
                       {% for _ in range(amount_of_pins) %}
-                            <div class="color color-slot" disabled="false"></div>
+                            <div class="color color-slot" disabled></div>
                         {% endfor %}
                  {% endif %}
                 </div>
