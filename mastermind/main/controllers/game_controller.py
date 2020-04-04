@@ -1,5 +1,6 @@
 from flask import request, redirect, render_template, url_for
 from flask.views import MethodView
+from flask import after_this_request
 
 
 class Game_Controller(MethodView):
@@ -12,6 +13,14 @@ class Game_Controller(MethodView):
             return redirect(url_for("main_bp.index"))
         elif self._game_model.current_game is None:
             return redirect(url_for("main_bp.new_game"))
+
+        @after_this_request
+        def after_request_func(response):
+            if self._game_model.has_won is not None:
+                print("Resetting!")
+                self._player_model.reset()
+                self._game_model.reset()
+            return response
 
         return render_template("game_screen.html",
                                game_sequence=self._game_model.get_current_game_sequence(),

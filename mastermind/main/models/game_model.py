@@ -3,12 +3,8 @@ from random import shuffle
 class Game_Model:
 
     def __init__(self, game_service):
-        self._current_game = None
-        self._game_sequence = None
+        self.reset()
         self._game_service = game_service
-        self._sequence = None
-        self._colors = None
-        self._has_won = None
 
     @property
     def current_game(self):
@@ -42,8 +38,7 @@ class Game_Model:
     def has_won(self, new_value):
         if (new_value is not None):
             self._game_service.set_game_finished(self.current_game, new_value)
-
-        self._has_won = new_value
+            self._has_won = new_value
 
     def create_new_game(self, player_id, double_colors_allowed, cheat_mode_allowed, amount_of_colors, position_amount):
         self.current_game = self._game_service.create_new_game(
@@ -120,3 +115,11 @@ class Game_Model:
 
     def __set_pins_for_attempt_and_check_win(self, attempt, pins):
         return self._game_service.set_pins_for_attempt_and_check_win(attempt, pins)
+
+    def reset(self):
+        self._sequence = None
+        self._colors = None
+        self._has_won = None
+        self._sequence = None
+        self._colors = None
+        self._has_won = None
