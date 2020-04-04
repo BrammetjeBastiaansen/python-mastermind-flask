@@ -92,11 +92,19 @@
                     <div>
                         <div class="guess-wrapper {{ 'active' if attempt == 0 else 'disabled' }}">
                         {% for n in range(amount_of_pins) %}
-    <!--                        TODO: Add disabled attribute to div based on current attempt.-->
                             <div class="color color-slot {{ 'dropZone' if attempt == 0 }}" disabled="false"></div>
                         {% endfor %}
                         </div>
                     </div>
+                    {% if attempt == 0 %}
+                        <div>
+                            <div class="hint-square">
+                            {% for _ in range(amount_of_pins) %}
+                                <div class="hint-slot hint-slot-none }}"></div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             {% endfor %}
            <div class="guess-row margin-bottom-5px">
