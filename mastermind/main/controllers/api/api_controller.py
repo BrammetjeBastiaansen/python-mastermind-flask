@@ -8,11 +8,12 @@ class Api_Controller(MethodView):
         self._game_model = game_model
 
     def get(self):
-        if request.path == '/api/double_colors_enabled':
+        if request.path == '/api/game/data':
             if self._game_model.current_game:
-                return jsonify(double_colors_enabled=self._game_model.current_game.double_colors_allowed)
+                return jsonify(double_colors_enabled=self._game_model.current_game.double_colors_allowed,
+                               amount_of_positions=self._game_model.current_game.position_amount)
 
-            return self.__return_default()
+        return self.__return_default()
 
     @classmethod
     def __return_default(cls):

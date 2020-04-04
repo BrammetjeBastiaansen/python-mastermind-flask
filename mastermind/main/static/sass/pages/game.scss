@@ -189,3 +189,13 @@ p.modal-text-smaller {
         }
     }
 }
+
+button[disabled] {
+    background-color: $darkgray;
+
+    &:hover {
+        background-color: $darkergray;
+        cursor: no-drop;
+        animation: none;
+    }
+}
