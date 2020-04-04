@@ -299,25 +299,26 @@ th, td {
 
               @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003122}}
               .draggable-color {
-                border: 1px solid #707070; }
+                border: 1px solid #707070;
+                font-size: 0px; }
 
-                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003126}}
+                @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003127}}
                 .draggable-color:hover, .color-slot:hover, .hint-slot:hover {
                   animation: scale-up-center 0.05s cubic-bezier(0.39, 0.575, 0.565, 1) both;
                   cursor: pointer; }
 
-                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003131}}
+                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003132}}
                   p.large-green-text {
                     color: #6EDC38;
                     font-size: 3em;
                     font-weight: bold; }
 
-                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003137}}
+                    @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003138}}
                     p.modal-text {
                       font-size: 2em;
                       font-weight: bold; }
 
-                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003142}}
+                      @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003143}}
                       .modal-overlay {
                         position: absolute;
                         top: 0;
@@ -326,21 +327,21 @@ th, td {
                         background-color: rgba(0, 0, 0, 0.5);
                         z-index: 99999; }
 
-                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003151}}
+                        @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003152}}
                         .modal {
                           z-index: 999999;
                           display: block;
                           padding-right: 17px; }
 
-                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003157}}
+                          @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003158}}
                           .modal-dialog-centered {
                             border-radius: 2em; }
 
-                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003161}}
+                            @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003162}}
                             .min-width-630px {
                               width: 630px; }
 
-                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003165}}
+                              @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003166}}
                               .guess-row {
                                 display: flex;
                                 justify-content: space-between; }
@@ -569,7 +570,7 @@ th, td {
                                                                                                         justify-content: center;
                                                                                                         align-items: center;
                                                                                                         text-align: center;
-                                                                                                        height: 80px;
+                                                                                                        height: 60px;
                                                                                                         width: 100%;
                                                                                                         margin-top: 10px; }
                                                                                                         @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\components\\drag-and-drop\.scss}line{font-family:\0000323}}

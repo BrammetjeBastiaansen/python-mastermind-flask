@@ -1,4 +1,4 @@
-from mastermind.database.models import Game, Color, GameColor, db
+from mastermind.database.models import *
 import sqlalchemy as sa
 
 import datetime
@@ -44,3 +44,16 @@ class Game_Service:
 
         db.session.commit()
         return sequence_colors, game_colors
+
+    @classmethod
+    def create_attempt(cls, game_id, dragged_colors):
+        attempt = Attempt(game_id=game_id)
+        db.session.add(attempt)
+
+        # We commit the session here so that we can use its id in the below code.
+        db.session.commit()
+
+        for color_id in dragged_colors:
+            db.session.add(AttemptColor(attempt_id=attempt.id, color_id=color_id))
+
+        db.session.commit()

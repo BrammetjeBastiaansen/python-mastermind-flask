@@ -23,7 +23,9 @@ class Game_Controller(MethodView):
                                amount_of_pins=self._game_model.current_game.position_amount)
 
     def post(self):
-        print(request.form)
+        dragged_colors = request.form.getlist("dragged")
+
+        self._game_model.create_attempt(dragged_colors)
 
         # TODO: Pass data to redirect to show previous attempts on game screen.
         return redirect(url_for("main_bp.game"))

@@ -45,7 +45,7 @@
                     </div>
                     <div class="colors">
                         {% for item in game_sequence %}
-                            <input class="color draggable-color draggable {{ item.name.lower() }}" draggable="true" name="draggable" disabled />
+                            <input class="color draggable-color draggable {{ item.name.lower() }}" draggable="true" name="draggable" value="{{ item.id }}" readonly />
                         {% endfor %}
                     </div>
                 </div>
