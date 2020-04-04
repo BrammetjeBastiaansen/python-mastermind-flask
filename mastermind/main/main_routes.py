@@ -69,7 +69,6 @@ main_bp.add_url_rule("/user-overview/<id>",
                      methods=["GET"])
 
 # Api routes
-main_bp.add_url_rule("/api/double_colors_enabled",
+main_bp.add_url_rule("/api/game/data",
                      view_func=Api_Controller.as_view("get_double_colors_enabled", player_model, game_model),
                      methods=["GET"])
-

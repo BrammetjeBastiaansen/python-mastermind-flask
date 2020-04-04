@@ -6,8 +6,12 @@
         this.element = null;
         this.dragStarted = false;
         this.double_colors_enabled = false;
+        this.amount_of_positions = 4;
 
-        fetch("/api/double_colors_enabled").then(data => data.json()).then(data => this.double_colors_enabled = data.double_colors_enabled)
+        fetch("/api/game/data").then(data => data.json()).then(data => {
+            this.double_colors_enabled = data.double_colors_enabled;
+            this.amount_of_positions = data.amount_of_positions;
+        });
 
         /**
          * Get draggable nodes
@@ -27,8 +31,16 @@
          */
         this.dragZone = document.querySelector(".dragZone")
 
+        /**
+         * Get colors container
+         * @type {Element}
+         */
         this.colors_container = document.querySelector(".colors");
 
+        /**
+         * Get apply button
+         * @type {Element}
+         */
         this.button = document.querySelector("#game-apply-button");
 
         /**
@@ -182,9 +194,7 @@
             return
         }
 
-        console.log(draggedColors.length);
-        // TODO: FETCH CODE LENGTH
-        this.button.disabled = draggedColors.length !== 4
+        this.button.disabled = draggedColors.length !== this.amount_of_positions;
     }
 }
 
