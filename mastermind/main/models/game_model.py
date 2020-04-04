@@ -40,6 +40,10 @@ class Game_Model:
 
     @has_won.setter
     def has_won(self, new_value):
+        if (new_value is not None):
+            print("Updating game!")
+            self._game_service.set_game_finished(self.current_game, new_value)
+
         self._has_won = new_value
 
     def create_new_game(self, player_id, double_colors_allowed, cheat_mode_allowed, amount_of_colors, position_amount):
