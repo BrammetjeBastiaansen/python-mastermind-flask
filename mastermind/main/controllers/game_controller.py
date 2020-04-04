@@ -26,4 +26,10 @@ class Game_Controller(MethodView):
             game_colors=self._game_model.game_colors)
 
     def post(self):
-        pass
+        # TODO: insert attempt into database
+
+        # TODO: win check
+        # All you have to do is call the set_pins_and_check_win method in game_model and send the result to the view as game_won
+
+
+        return redirect(url_for("main_bp.game"))
