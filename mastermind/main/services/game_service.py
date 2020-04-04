@@ -89,3 +89,11 @@ class Game_Service:
         db.session.commit()
 
         return attempt
+
+    @classmethod
+    def set_game_finished(cls, game, won):
+        game = Game.query.get(game.id)
+        game.is_finished = True
+        game.has_won = won
+
+        db.session.commit()
