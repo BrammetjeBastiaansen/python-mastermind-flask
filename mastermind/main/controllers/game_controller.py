@@ -1,5 +1,3 @@
-import json
-
 from flask import request, redirect, render_template, url_for
 from flask.views import MethodView
 
@@ -10,9 +8,6 @@ class Game_Controller(MethodView):
         self._game_model = game_model
 
     def get(self):
-        if request.path == '/api/double_colors_enabled':
-            return json.dumps({'double_colors_enabled': self._game_model.current_game.double_colors_allowed})
-
         if self._player_model.get_current_player is None:
             return redirect(url_for("main_bp.index"))
         elif self._game_model.current_game is None:
@@ -30,8 +25,8 @@ class Game_Controller(MethodView):
     def post(self):
         dragged_colors = request.form.getlist("dragged")
 
-        self._game_model.create_attempt(dragged_colors)
-
-        pins = self._game_model.set_pins_and_check_win()
+        if len(dragged_colors) == self._game_model.current_game.position_amount:
+            self._game_model.create_attempt(dragged_colors)
+            self._game_model.set_pins_and_check_win()
 
         return redirect(url_for("main_bp.game"))

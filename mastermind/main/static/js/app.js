@@ -9,3 +9,4 @@ function includeJs(jsFilePath) {
 
 includeJs("main/static/js/game_screen_autoselector.js");
 includeJs("main/static/js/drag_and_drop.js");
+includeJs("main/static/js/dragged-colors-validation.js");

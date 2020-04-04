@@ -29,6 +29,8 @@
 
         this.colors_container = document.querySelector(".colors");
 
+        this.button = document.querySelector("#game-apply-button");
+
         /**
          * Add event listeners to draggable nodes
          */
@@ -169,8 +171,20 @@
                 this.element.name = `draggable`;
             }
         }
-
+        this._toggleSubmitButton();
         this.element = null;
+    }
+
+    _toggleSubmitButton() {
+        const draggedColors = document.querySelectorAll("input[name='dragged']");
+
+        if(!this.button || !draggedColors) {
+            return
+        }
+
+        console.log(draggedColors.length);
+        // TODO: FETCH CODE LENGTH
+        this.button.disabled = draggedColors.length !== 4
     }
 }
 
