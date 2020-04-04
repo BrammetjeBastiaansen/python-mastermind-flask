@@ -68,13 +68,34 @@
             </div>
         </div>
         <div class="container-content full-width">
-            {% for n in range(12) %}
+            {% for attempt in attempts %}
                 <div class="guess-row margin-bottom-5px">
                     <div>
-                        <div class="guess-wrapper">
+                        <div class="guess-wrapper disabled">
+                        {% for attempt_color in attempt.attempt_colors %}
+                            <div class="color color-slot" disabled>
+                                <input class="color draggable-color no-events {{ attempt_color.color.name.lower() }}" readonly />
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <div>
+                        <div class="hint-square">
+<!--                            TODO: Place pins-->
+                        {% for n in range(amount_of_pins) %}
+                            <div class="hint-slot"></div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% for attempt in range(12 - attempts|length) %}
+                <div class="guess-row margin-bottom-5px">
+                    <div>
+                        <div class="guess-wrapper {{ 'active' if attempt == 0 else 'disabled' }}">
                         {% for n in range(amount_of_pins) %}
     <!--                        TODO: Add disabled attribute to div based on current attempt.-->
-                            <div class="color color-slot dropZone" disabled="false"></div>
+                            <div class="color color-slot {{ 'dropZone' if attempt == 0 }}" disabled="false"></div>
                         {% endfor %}
                         </div>
                     </div>

@@ -49,6 +49,7 @@ div.color {
 .darkred { background-color: $darkred; }
 .purple { background-color: $purple; }
 .lightergreen { background-color: $lightergreen; }
+.babyblue { background-color: $babyblue; }
 
 div.color-slot {
     position: relative;
@@ -165,4 +166,19 @@ p.modal-text-smaller {
 .guess-row {
     display: flex;
     justify-content: space-between;
+}
+
+.active {
+    background-color: $babyblue;
+}
+
+.disabled {
+    background-color: $white;
+
+    .color-slot {
+        &:hover {
+            animation: none;
+            cursor: no-drop;
+        }
+    }
 }

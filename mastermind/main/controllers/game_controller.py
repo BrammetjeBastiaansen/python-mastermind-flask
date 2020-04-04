@@ -23,7 +23,8 @@ class Game_Controller(MethodView):
                                amount_of_pins=self._game_model.current_game.position_amount,
                                player_name=self._player_model.get_current_player.name,
                                cheat_enabled=self._game_model.current_game.cheats_used,
-                               game_colors=self._game_model.game_colors)
+                               game_colors=self._game_model.game_colors,
+                               attempts=self._game_model.get_game_attempts())
 
     def post(self):
         dragged_colors = request.form.getlist("dragged")
