@@ -20,7 +20,9 @@ class Game_Controller(MethodView):
                 print("Resetting!")
                 self._player_model.reset()
                 self._game_model.reset()
+
             return response
+
 
         return render_template("game_screen.html",
                                game_sequence=self._game_model.get_current_game_sequence(),
