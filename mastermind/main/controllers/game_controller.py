@@ -24,7 +24,7 @@ class Game_Controller(MethodView):
                                player_name=self._player_model.get_current_player.name,
                                cheat_enabled=self._game_model.current_game.cheats_used,
                                game_colors=self._game_model.game_colors,
-                               attempts=self._game_model.get_game_attempts()),
+                               attempts=self._game_model.get_game_attempts(),
                                has_won=self._game_model.has_won)
 
     def post(self):
