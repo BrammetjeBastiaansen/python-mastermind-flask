@@ -26,10 +26,11 @@ class Game_Controller(MethodView):
             game_colors=self._game_model.game_colors)
 
     def post(self):
-        # TODO: insert attempt into database
+        dragged_colors = request.form.getlist("dragged")
+
+        self._game_model.create_attempt(dragged_colors)
 
         # TODO: win check
         # All you have to do is call the set_pins_and_check_win method in game_model and send the result to the view as game_won
-
-
+        # TODO: Pass data to redirect to show previous attempts on game screen.
         return redirect(url_for("main_bp.game"))

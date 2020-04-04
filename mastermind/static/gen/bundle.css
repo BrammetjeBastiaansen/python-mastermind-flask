@@ -184,7 +184,15 @@ th, td {
 
                 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000334}}
                 .colors {
-                  text-align: center; }
+                  text-align: center;
+                  width: 220px; }
+                  @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\brame\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000337}}
+                  .colors input {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin: 0 10px 15px 10px; }
 
                   @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000338}}
                   div.red {
@@ -258,7 +266,7 @@ th, td {
     background-color: #FEFEFE;
     border: 1px solid #707070;
     border-radius: 0.3em;
-    padding: 5px 0;
+    padding: 5px 15px;
     height: 100%; }
 
     @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\0000383}}
@@ -280,7 +288,8 @@ th, td {
             justify-content: center;
             border: 1px solid #707070;
             background-color: #6EDC38;
-            border-radius: 0.3em; }
+            border-radius: 0.3em;
+            max-width: 150px; }
 
             @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003104}}
             .hint-slot {
@@ -293,7 +302,8 @@ th, td {
 
               @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003113}}
               .draggable-color {
-                border: 1px solid #707070; }
+                border: 1px solid #707070;
+                font-size: 0px; }
 
                 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\\Users\\ceesm\\Documents\\School\\Blok\ 7\\Python\\python-mastermind-flask\\mastermind\\main\\static\\sass\\pages\\game\.scss}line{font-family:\00003117}}
                 .draggable-color:hover, .color-slot:hover, .hint-slot:hover {

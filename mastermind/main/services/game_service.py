@@ -57,7 +57,6 @@ class Game_Service:
 
         db.session.commit()
 
-
     @classmethod
     def get_pin(cls, name):
         return Pin.query.filter_by(name=name).first()
@@ -69,3 +68,16 @@ class Game_Service:
     @classmethod
     def get_game_attempt_amount(cls, game):
         return db.session.query(Attempt).filter_by(game_id=game.id).count()
+
+    @classmethod
+    def create_attempt(cls, game_id, dragged_colors):
+        attempt = Attempt(game_id=game_id)
+        db.session.add(attempt)
+
+        # We commit the session here so that we can use its id in the below code.
+        db.session.commit()
+
+        for color_id in dragged_colors:
+            db.session.add(AttemptColor(attempt_id=attempt.id, color_id=color_id))
+
+        db.session.commit()

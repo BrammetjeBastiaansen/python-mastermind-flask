@@ -45,6 +45,9 @@ class Game_Model:
 
         return self._current_game
 
+    def create_attempt(self, dragged_colors):
+        return self._game_service.create_attempt(self._current_game.id, dragged_colors)
+
     def __create_random_sequence_for_game(self, game, amount_of_colors, position_amount):
         self.game_sequence, self._colors = self._game_service.create_game_sequence(game, amount_of_colors, position_amount)
 

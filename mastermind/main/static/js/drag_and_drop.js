@@ -120,7 +120,6 @@
         if(e.target.parentElement.classList.contains("dropZone")) {
             this.element = e.target;
         } else {
-            console.log(this.double_colors_enabled);
             if(this.double_colors_enabled) {
                 this.element = e.target.cloneNode(true);
                 this._applyDraggableEvents(this.element);
@@ -155,6 +154,8 @@
             if(e.target.attributes.disabled.value !== "false") {
                 return;
             }
+            this.element.name = `dragged`;
+
             e.target.append(this.element);
             this.audio.play();
         }
@@ -165,6 +166,7 @@
                 this.dragZone.classList.remove("drag-zone-delete");
             } else {
                 this.colors_container.append(this.element)
+                this.element.name = `draggable`;
             }
         }
 
