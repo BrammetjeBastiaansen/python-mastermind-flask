@@ -46,6 +46,8 @@ class Game_Service:
         db.session.commit()
         return sequence_colors, game_colors
 
+    def get_games_sequence(cls, game):
+        return Game.query.get(game.id).game_colors
 
     @classmethod
     def set_pins_for_games_most_recent_attempt(cls, game, pins):
@@ -58,8 +60,8 @@ class Game_Service:
         db.session.commit()
 
     @classmethod
-    def get_pin(cls, name):
-        return Pin.query.filter_by(name=name).first()
+    def get_pin(cls, color):
+        return Pin.query.filter_by(color=color).first()
 
     @classmethod
     def get_games_most_recent_attempt(cls, game):

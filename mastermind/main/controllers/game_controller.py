@@ -19,18 +19,18 @@ class Game_Controller(MethodView):
             return redirect(url_for("main_bp.new_game"))
 
         return render_template("game_screen.html",
-                               game_sequence=self._game_model.game_sequence,
+                               game_sequence=self._game_model._game_sequence,
                                amount_of_pins=self._game_model.current_game.position_amount,
                                player_name=self._player_model.get_current_player.name,
                                cheat_enabled=self._game_model.current_game.cheats_used,
-                               game_colors=self._game_model.game_colors)
+                               game_colors=self._game_model.game_colors,
+                               has_won=self._game_model.has_won)
 
     def post(self):
         dragged_colors = request.form.getlist("dragged")
 
         self._game_model.create_attempt(dragged_colors)
 
-        # TODO: win check
-        # All you have to do is call the set_pins_and_check_win method in game_model and send the result to the view as game_won
-        # TODO: Pass data to redirect to show previous attempts on game screen.
+        pins = self._game_model.set_pins_and_check_win()
+
         return redirect(url_for("main_bp.game"))

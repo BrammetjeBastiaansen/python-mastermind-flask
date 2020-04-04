@@ -2,16 +2,17 @@
 
 {% block overlay %}
     <!-- TODO: send boolean game_won to this page when the game has ended -->
-    {% if game_won is defined %}
+    {% if has_won is not none %}
         <div class="modal-overlay"></div>
         <div class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        {% if game_won %}
+                        {% if has_won %}
                             <h2 class="modal-title text-center mb-4 fat">WE HAVE A WINNER!</h2>
                             <p class="text-center modal-text">You cracked the code in:</p>
-                            <p class="text-center my-4 large-green-text">4 tries!</p>
+                            <!-- TODO: add attempt count -->
+                            <p class="text-center my-4 large-green-text">TODO tries!</p>
                         {% else %}
                             <h2 class="modal-title text-center mb-4 fat">Game Over</h2>
                             <p class="text-center modal-text-smaller">You were not able to crack the code</p>
