@@ -41,7 +41,6 @@ class Game_Model:
     @has_won.setter
     def has_won(self, new_value):
         if (new_value is not None):
-            print("Updating game!")
             self._game_service.set_game_finished(self.current_game, new_value)
 
         self._has_won = new_value
