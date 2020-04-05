@@ -1,0 +1,60 @@
+.custom-table {
+    width: 100%;
+    padding-bottom: 20px;
+
+    .table-headers {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $borderColor;
+
+        .table-header {
+            width: 150px;
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+    }
+
+    .table-body {
+        width: 100%;
+
+        .table-row {
+            display: flex;
+            width: 100%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            .table-column {
+                width: 150px;
+                font-size: 1rem;
+                padding-right: 30px;
+            }
+
+            .full {
+                width: 100%;
+            }
+
+            .padding-right-0px {
+                padding-right: 0px;
+            }
+        }
+    }
+
+    .small-scroll {
+        height: calc(100vh - 1300px);
+        min-height: 200px;
+        overflow-y: auto;
+    }
+
+    .large-scroll {
+        height: calc(100vh - 1000px);
+        min-height: 200px;
+        overflow-y: auto;
+    }
+
+    .medium-scroll {
+        height: calc(100vh - 650px);
+        min-height: 200px;
+        overflow-y: auto;
+    }
+}

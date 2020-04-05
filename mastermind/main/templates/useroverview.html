@@ -6,50 +6,46 @@
 
         {% if player.games %}
             <h3>Gespeeld op</h3>
-            <table class="mb-4">
-                <thead>
-                    <tr>
-                        <th>Datum</th>
-                        <th>Aantal</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div class="custom-table">
+                <div class="table-headers">
+                    <div class="table-header">Datum</div>
+                    <div class="table-header">Aantal</div>
+                </div>
+                <div class="table-body small-scroll">
                     {% for game_amount_by_date in game_amounts_by_date %}
-                        <tr>
-                            <td>{{ game_amount_by_date.date }}</td>
-                            <td>{{ game_amount_by_date.amount }} keer</td>
-                        </tr>
+                        <div class="table-row">
+                            <div class="table-column">{{ game_amount_by_date.date }}</div>
+                            <div class="table-column">{{ game_amount_by_date.amount }} keer</div>
+                        </div>
                     {% endfor %}
-                </tbody>
-            </table>
+                </div>
+            </div>
 
             <h3>Gespeelde potjes</h3>
-            <table class="mb-5">
-                <thead>
-                    <tr>
-                        <th>Nummer</th>
-                        <th>Datum</th>
-                        <th>Pogingen</th>
-                        <th>Cheatmode</th>
-                        <th>Gewonnen</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div class="custom-table">
+                <div class="table-headers">
+                    <div class="table-header">Nummer</div>
+                    <div class="table-header">Datum</div>
+                    <div class="table-header">Pogingen</div>
+                    <div class="table-header">Cheatmode</div>
+                    <div class="table-header">Gewonnen</div>
+                </div>
+                <div class="table-body large-scroll">
                     {% for game in player.games %}
-                        <tr>
-                            <td>#{{ game.id }}</td>
-                            <td>{{ game.played_on.date() }}</td>
+                        <div class="table-row">
+                            <div class="table-column">#{{ game.id }}</div>
+                            <div class="table-column">{{ game.played_on.date() }}</div>
                             {% if game.is_finished %}
-                                <td>{{ game.attempts|length }} {{ "poging" if game.attempts|length == 1 else "pogingen"}}</td>
+                                <div class="table-column">{{ game.attempts|length }} {{ "poging" if game.attempts|length == 1 else "pogingen"}}</div>
                             {% else %}
-                                <td>N/A</td>
+                                <div class="table-column">N/A</div>
                             {% endif %}
-                            <td>{{ "Ja" if game.cheats_used else "Nee"}}</td>
-                            <td>{{ "Ja" if game.has_won else "Nee"}}</td>
-                        </tr>
+                            <div class="table-column">{{ "Ja" if game.cheats_used else "Nee"}}</div>
+                            <div class="table-column">{{ "Ja" if game.has_won else "Nee"}}</div>
+                        </div>
                     {% endfor %}
-                </tbody>
-            </table>
+                </div>
+            </div>
         {% else %}
             <h3 class="my-4 text-center">{{ player.name }} heeft nog geen potjes gespeeld.</h3>
         {% endif %}
