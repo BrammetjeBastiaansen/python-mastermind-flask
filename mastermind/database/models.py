@@ -1,43 +1,65 @@
-from mastermind.app import db
+from sqlalchemy import *
+from sqlalchemy.orm import relationship
+from mastermind.database.database import Base
 from datetime import datetime
 
 
-class Player(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(20), unique=True, nullable=False)
+class Player(Base):
+    __tablename__ = 'player'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(20), unique=True, nullable=False)
 
-    games = db.relationship('Game', back_populates='player')
+    games = relationship('Game', back_populates='player')
+
+    def __init__(self, name=None):
+        self.name = name
 
     def __repr__(self):
         return f"User(id={self.id}, name={self.name})"
 
 
-class GameColor(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
-    color_id = db.Column(db.Integer, db.ForeignKey('color.id'), nullable=False)
+class GameColor(Base):
+    __tablename__ = 'game_color'
+    id = Column(Integer, primary_key=True)
+    game_id = Column(Integer, ForeignKey('game.id'), nullable=False)
+    color_id = Column(Integer, ForeignKey('color.id'), nullable=False)
 
-    game = db.relationship('Game', back_populates='game_colors')
-    color = db.relationship('Color', back_populates='game_colors')
+    game = relationship('Game', back_populates='game_colors')
+    color = relationship('Color', back_populates='game_colors')
+
+    def __init__(self, game_id=None, color_id=None):
+        self.game_id = game_id
+        self.color_id = color_id
 
     def __repr__(self):
         return f"GameColor(id={self.id}, game_id={self.game_id}, color_id={self.color_id})"
 
 
-class Game(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    player_id = db.Column(db.Integer, db.ForeignKey('player.id'), nullable=False)
-    double_colors_allowed = db.Column(db.Boolean, nullable=False)
-    color_amount = db.Column(db.Integer, nullable=False)
-    position_amount = db.Column(db.Integer, nullable=False)
-    played_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    cheats_used = db.Column(db.Boolean, default=False)
-    is_finished = db.Column(db.Boolean, default=False)
-    has_won = db.Column(db.Boolean, default=False)
+class Game(Base):
+    __tablename__ = 'game'
+    id = Column(Integer, primary_key=True)
+    player_id = Column(Integer, ForeignKey('player.id'), nullable=False)
+    double_colors_allowed = Column(Boolean, nullable=False)
+    color_amount = Column(Integer, nullable=False)
+    position_amount = Column(Integer, nullable=False)
+    played_on = Column(DateTime, nullable=False, default=datetime.utcnow)
+    cheats_used = Column(Boolean, default=False)
+    is_finished = Column(Boolean, default=False)
+    has_won = Column(Boolean, default=False)
 
-    player = db.relationship('Player', back_populates='games')
-    game_colors = db.relationship('GameColor', back_populates='game')
-    attempts = db.relationship('Attempt', back_populates='game')
+    player = relationship('Player', back_populates='games')
+    game_colors = relationship('GameColor', back_populates='game')
+    attempts = relationship('Attempt', back_populates='game')
+
+    def __init__(self, player_id=None, double_colors_allowed=None, color_amount=None, position_amount=None, played_on=datetime.utcnow, cheats_used=False, is_finished=False, has_won=False):
+        self.player_id = player_id
+        self.double_colors_allowed = double_colors_allowed
+        self.color_amount = color_amount
+        self.position_amount = position_amount
+        self.played_on = played_on
+        self.cheats_used = cheats_used
+        self.is_finished = is_finished
+        self.has_won = has_won
 
     def __repr__(self):
         return f"Game(id={self.id}, player_id={self.player_id}, double_colors_allowed={self.double_colors_allowed}," \
@@ -45,58 +67,80 @@ class Game(db.Model):
                f" cheats_used={self.cheats_used})"
 
 
-class AttemptColor(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    attempt_id = db.Column(db.Integer, db.ForeignKey('attempt.id'), nullable=False)
-    color_id = db.Column(db.Integer, db.ForeignKey('color.id'), nullable=False)
+class AttemptColor(Base):
+    __tablename__ = 'attempt_color'
+    id = Column(Integer, primary_key=True)
+    attempt_id = Column(Integer, ForeignKey('attempt.id'), nullable=False)
+    color_id = Column(Integer, ForeignKey('color.id'), nullable=False)
 
-    attempt = db.relationship('Attempt', back_populates='attempt_colors')
-    color = db.relationship('Color', back_populates='attempt_colors')
+    attempt = relationship('Attempt', back_populates='attempt_colors')
+    color = relationship('Color', back_populates='attempt_colors')
+
+    def __init__(self, attempt_id=None, color_id=None):
+        self.attempt_id = attempt_id
+        self.color_id = color_id
 
     def __repr__(self):
         return f"AttemptColor(id={self.id}, attempt_id={self.attempt_id}, color_id={self.color_id})"
 
 
-class Attempt(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
+class Attempt(Base):
+    __tablename__ = 'attempt'
+    id = Column(Integer, primary_key=True)
+    game_id = Column(Integer, ForeignKey('game.id'), nullable=False)
 
-    attempt_colors = db.relationship('AttemptColor', back_populates='attempt')
-    attempt_pins = db.relationship('AttemptPin', back_populates='attempt')
-    game = db.relationship('Game', back_populates='attempts')
+    attempt_colors = relationship('AttemptColor', back_populates='attempt')
+    attempt_pins = relationship('AttemptPin', back_populates='attempt')
+    game = relationship('Game', back_populates='attempts')
+
+    def __init__(self, game_id=None,):
+        self.game_id = game_id
 
     def __repr__(self):
         return f"Attempt(id={self.id})"
 
 
-class Color(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(40), nullable=False)
+class Color(Base):
+    __tablename__ = 'color'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(40), nullable=False)
 
-    game_colors = db.relationship('GameColor', back_populates='color')
-    attempt_colors = db.relationship('AttemptColor', back_populates='color')
+    game_colors = relationship('GameColor', back_populates='color')
+    attempt_colors = relationship('AttemptColor', back_populates='color')
+
+    def __init__(self, name=None):
+        self.name = name
 
     def __repr__(self):
         return f"Color(id={self.id}, name={self.name})"
 
 
-class AttemptPin(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    attempt_id = db.Column(db.Integer, db.ForeignKey('attempt.id'), nullable=False)
-    pin_id = db.Column(db.Integer, db.ForeignKey('pin.id'), nullable=False)
+class AttemptPin(Base):
+    __tablename__ = 'attempt_pin'
+    id = Column(Integer, primary_key=True)
+    attempt_id = Column(Integer, ForeignKey('attempt.id'), nullable=False)
+    pin_id = Column(Integer, ForeignKey('pin.id'), nullable=False)
 
-    attempt = db.relationship('Attempt', back_populates='attempt_pins')
-    pin = db.relationship('Pin', back_populates='attempt_pins')
+    attempt = relationship('Attempt', back_populates='attempt_pins')
+    pin = relationship('Pin', back_populates='attempt_pins')
+
+    def __init__(self, attempt_id=None, pin_id=None):
+        self.attempt_id = attempt_id
+        self.pin_id = pin_id
 
     def __repr__(self):
         return f"AttemptPin(id={self.id}, attempt_id={self.attempt_id}, pin_id={self.pin_id})"
 
 
-class Pin(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    color = db.Column(db.String(40), nullable=False)
+class Pin(Base):
+    __tablename__ = 'pin'
+    id = Column(Integer, primary_key=True)
+    color = Column(String(40), nullable=False)
 
-    attempt_pins = db.relationship('AttemptPin', back_populates='pin')
+    attempt_pins = relationship('AttemptPin', back_populates='pin')
+
+    def __init__(self, color=None):
+        self.color = color
 
     def __repr__(self):
         return f"Pin(id={self.id}, color={self.color})"

@@ -1,4 +1,5 @@
-from mastermind.database.models import Game, Color, GameColor, Player, db
+from mastermind.database.models import Game, Color, GameColor, Player
+from mastermind.database.database import db_session
 import sqlalchemy as sa
 
 
@@ -18,12 +19,12 @@ class Player_Service:
 
     @classmethod
     def get_played_game_amounts_by_date(cls, player_id):
-        return db.session.query(Game.played_on.label("date"), sa.func.count(Game.id).label("amount")).filter_by(player_id=player_id).group_by(sa.func.date(Game.played_on)).all()
+        return db_session.query(Game.played_on.label("date"), sa.func.count(Game.id).label("amount")).filter_by(player_id=player_id).group_by(sa.func.date(Game.played_on)).all()
 
     @classmethod
     def create_new_player(cls, playerName):
         player = Player(name=playerName)
-        db.session.add(player)
-        db.session.commit()
+        db_session.add(player)
+        db_session.commit()
 
         return player
