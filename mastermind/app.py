@@ -15,7 +15,7 @@ def create_app():
     app.config.from_object('config')
     app.config.from_pyfile(os.getcwd() + '/instance/config.py')
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///database/site.db'
+    app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///database/site.db?check_same_thread=False'
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
