@@ -126,7 +126,7 @@ div.color-slot {
     font-size: 0px;
 }
 
-.draggable-color:hover, .color-slot:hover, .hint-slot:hover {
+.draggable-color:hover, .color-slot:hover, .hint-slot:hover:not(.hint-slot-none) {
     animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     cursor: pointer;
 }
