@@ -14,7 +14,7 @@
                 <div class="table-body small-scroll">
                     {% for game_amount_by_date in game_amounts_by_date %}
                         <div class="table-row">
-                            <div class="table-column">{{ game_amount_by_date.date }}</div>
+                            <div class="table-column">{{ game_amount_by_date.date.strftime('%d-%m-%Y') }}</div>
                             <div class="table-column">{{ game_amount_by_date.amount }} keer</div>
                         </div>
                     {% endfor %}
