@@ -5,8 +5,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_assets import Environment, Bundle
 
-
-db = SQLAlchemy()
+from mastermind.database.database import init_db
 
 
 def create_app():
@@ -15,16 +14,11 @@ def create_app():
     app.config.from_object('config')
     app.config.from_pyfile(os.getcwd() + '/instance/config.py')
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///database/site.db'
-    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-    db.init_app(app)
+    init_db()
 
     with app.app_context():
         # Import parts of our application
         from mastermind.main import main_routes
-
-        db.create_all()
 
         app.register_blueprint(main_routes.main_bp)
 

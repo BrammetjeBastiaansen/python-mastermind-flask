@@ -1,4 +1,5 @@
 from mastermind.database.models import *
+from mastermind.database.database import db_session
 import sqlalchemy as sa
 
 import datetime
@@ -18,8 +19,8 @@ class Game_Service:
             cheats_used=cheat_mode_allowed,
         )
 
-        db.session.add(game)
-        db.session.commit()
+        db_session.add(game)
+        db_session.commit()
 
         return game
 
@@ -40,9 +41,9 @@ class Game_Service:
         for sequence_id in sequence_ids:
             sequence_color = GameColor(game_id=game.id, color_id=sequence_id)
             sequence_colors.append(sequence_color)
-            db.session.add(sequence_color)
+            db_session.add(sequence_color)
 
-        db.session.commit()
+        db_session.commit()
         return sequence_colors, game_colors
 
     def get_games_sequence(cls, game):
@@ -54,9 +55,9 @@ class Game_Service:
 
         for pin in pins:
             attempt_pin = AttemptPin(attempt_id=attempt.id, pin_id=pin.id)
-            db.session.add(attempt_pin)
+            db_session.add(attempt_pin)
 
-        db.session.commit()
+        db_session.commit()
 
     @classmethod
     def get_pin(cls, color):
@@ -64,28 +65,28 @@ class Game_Service:
 
     @classmethod
     def get_games_most_recent_attempt(cls, game):
-        return db.session.query(Attempt).filter_by(game_id=game.id).order_by(Attempt.id.desc()).first()
+        return db_session.query(Attempt).filter_by(game_id=game.id).order_by(Attempt.id.desc()).first()
 
     @classmethod
     def get_game_attempt_amount(cls, game):
-        return db.session.query(Attempt).filter_by(game_id=game.id).count()
+        return db_session.query(Attempt).filter_by(game_id=game.id).count()
 
     @classmethod
     def get_game_attempts(cls, game):
-        return db.session.query(Attempt).filter_by(game_id=game.id).all()
+        return db_session.query(Attempt).filter_by(game_id=game.id).all()
 
     @classmethod
     def create_attempt(cls, game_id, dragged_colors):
         attempt = Attempt(game_id=game_id)
-        db.session.add(attempt)
+        db_session.add(attempt)
 
         # We commit the session here so that we can use its id in the below code.
-        db.session.commit()
+        db_session.commit()
 
         for color_id in dragged_colors:
-            db.session.add(AttemptColor(attempt_id=attempt.id, color_id=color_id))
+            db_session.add(AttemptColor(attempt_id=attempt.id, color_id=color_id))
 
-        db.session.commit()
+        db_session.commit()
 
         return attempt
 
@@ -95,4 +96,4 @@ class Game_Service:
         game.is_finished = True
         game.has_won = won
 
-        db.session.commit()
+        db_session.commit()
