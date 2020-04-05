@@ -11,7 +11,7 @@
             {% for player in players %}
                 <div class="table-row">
                     <div class="table-column">{{ player.name }}</div>
-                    <div class="table-column full d-flex justify-content-end padding-right-0px">
+                    <div class="table-column full d-flex justify-content-end padding-right-5px">
                         <button>
                             <a href="{{ url_for('main_bp.user_overview', id=player.id) }}" class="green-btn">Statistics</a>
                         </button>
