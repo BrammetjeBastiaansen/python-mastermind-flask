@@ -17,12 +17,10 @@ class Game_Controller(MethodView):
         @after_this_request
         def after_request_func(response):
             if self._game_model.has_won is not None:
-                print("Resetting!")
                 self._player_model.reset()
                 self._game_model.reset()
 
             return response
-
 
         return render_template("game_screen.html",
                                game_sequence=self._game_model.get_current_game_sequence(),
