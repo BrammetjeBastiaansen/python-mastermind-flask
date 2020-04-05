@@ -3,15 +3,15 @@
     border-radius: 10px;
     border: 1px solid $borderColor;
     padding: 10px;
+
+    .border-container-title {
+        text-align: center;
+    }
 }
 
 .container-content {
     padding: 5px;
     margin-bottom: 15px;
-}
-
-.border-container-title {
-    text-align: center;
 }
 
 .button-container {
@@ -51,28 +51,6 @@ div.color {
 .lightergreen { background-color: $lightergreen; }
 .babyblue { background-color: $babyblue; }
 
-div.color-slot {
-    position: relative;
-    border: 1px solid $borderColor;
-    margin: 0 2px;
-    height: 40px;
-    width: 40px;
-    background-color: $white;
-
-    .draggable-color {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        border-radius: 50%;
-    }
-}
-
-.no-table-whitespace {
-    margin-bottom: -7px !important;
-}
-
 .guess-wrapper {
     display: flex;
     justify-content: center;
@@ -81,18 +59,24 @@ div.color-slot {
     border-radius: 0.3em;
     padding: 5px 15px;
     height: 100%;
-}
 
-.first-guess {
-    background-color: inherit;
-}
+    div.color-slot {
+        position: relative;
+        border: 1px solid $borderColor;
+        margin: 0 2px;
+        height: 40px;
+        width: 40px;
+        background-color: $white;
 
-.answer {
-    background-color: $lightgreen;
-}
-
-.answer .color-slot {
-    background-color: white;
+        .draggable-color {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            border-radius: 50%;
+        }
+    }
 }
 
 .hint-square {
@@ -103,14 +87,14 @@ div.color-slot {
     background-color: $lightgreen;
     border-radius: 0.3em;
     max-width: 150px;
-}
 
-.hint-slot {
-    min-width: 17px;
-    max-width: 17px;
-    height: 17px;
-    margin: 5px;
-    border-radius: 0.15em;
+    .hint-slot {
+        min-width: 17px;
+        max-width: 17px;
+        height: 17px;
+        margin: 5px;
+        border-radius: 0.15em;
+    }
 }
 
 .hint-slot-pink {
@@ -123,28 +107,12 @@ div.color-slot {
 
 .draggable-color {
     border: 1px solid $borderColor;
-    font-size: 0px;
+    font-size: 0;
 }
 
 .draggable-color:hover, .color-slot:hover, .hint-slot:hover:not(.hint-slot-none) {
     animation: scale-up-center 0.05s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     cursor: pointer;
-}
-
-p.large-green-text {
-    color: #6EDC38;
-    font-size: 3em;
-    font-weight: bold;
-}
-
-p.modal-text {
-    font-size: 2em;
-    font-weight: bold;
-}
-
-p.modal-text-smaller {
-    font-size: 1.6em;
-    font-weight: bold;
 }
 
 .modal-overlay {
@@ -153,40 +121,51 @@ p.modal-text-smaller {
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99999
+    z-index: 99999;
 }
 
 .modal {
     z-index: 999999;
     display: block;
-    padding-right: 17px;
-}
 
-.modal-dialog-centered {
-    border-radius: 2em;
-}
+    .modal-dialog-centered {
+        border-radius: 2em;
 
-.min-width-630px {
-    width: 630px;
+        div.modal-content {
+            border-radius: 20px;
+            box-shadow: $shadow;
+
+            p.large-green-text {
+                color: #6EDC38;
+                font-size: 3em;
+                font-weight: bold;
+            }
+
+            p.modal-text {
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+            p.modal-text-smaller {
+                font-size: 1.6em;
+                font-weight: bold;
+            }
+
+            .guess-row-center {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
 }
 
 .guess-row {
     display: flex;
     justify-content: space-between;
-}
 
-.guess-row-center {
-    display: flex;
-    justify-content: center;
-}
-
-div.modal-content {
-    border-radius: 20px;
-    box-shadow: $shadow;
-}
-
-.active {
-    background-color: $babyblue;
+    .active {
+        background-color: $babyblue;
+    }
 }
 
 .disabled {
