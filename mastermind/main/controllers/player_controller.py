@@ -3,8 +3,9 @@ from flask.views import MethodView
 
 
 class Player_Controller(MethodView):
-    def __init__(self, player_model):
+    def __init__(self, player_model, game_model):
         self._player_model = player_model
+        self._game_model = game_model
 
     def get(self):
         return render_template("startscreen.html")
@@ -19,5 +20,7 @@ class Player_Controller(MethodView):
             self._player_model.create_new_player(playerName)
 
         self._player_model.set_current_player = self._player_model.get_existing_player(playerName)
+
+        self._game_model.reset()
 
         return redirect("/new-game")

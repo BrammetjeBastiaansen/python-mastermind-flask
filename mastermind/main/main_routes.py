@@ -36,10 +36,10 @@ game_model = Game_Model(game_service)
 
 # Homepage routes
 main_bp.add_url_rule("/",
-                     view_func=Player_Controller.as_view("index", player_model),
+                     view_func=Player_Controller.as_view("index", player_model, game_model),
                      methods=["GET"])
 main_bp.add_url_rule("/",
-                     view_func=Player_Controller.as_view("create", player_model),
+                     view_func=Player_Controller.as_view("create", player_model, game_model),
                      methods=["POST"])
 
 # Game create routes
