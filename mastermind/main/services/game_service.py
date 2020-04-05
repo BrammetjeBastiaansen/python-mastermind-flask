@@ -23,7 +23,6 @@ class Game_Service:
 
         return game
 
-
     @classmethod
     def create_game_sequence(cls, game, amount_of_colors, position_amount):
         game_colors = Color.query.limit(amount_of_colors).all()
