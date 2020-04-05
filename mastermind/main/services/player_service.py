@@ -1,5 +1,4 @@
 from mastermind.database.models import Game, Color, GameColor, Player, db
-from datetime import datetime
 import sqlalchemy as sa
 
 
