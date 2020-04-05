@@ -1,5 +1,9 @@
 {% extends "game.html" %}
 
+{% block scripts %}
+        <script src="main/static/js/drag_and_drop.js" defer></script>
+{% endblock %}
+
 {% block overlay %}
     {% if has_won is not none %}
         <div class="modal-overlay"></div>

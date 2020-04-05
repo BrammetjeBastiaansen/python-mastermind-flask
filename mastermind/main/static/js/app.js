@@ -6,6 +6,3 @@ function includeJs(jsFilePath) {
 
     document.querySelector("head").appendChild(js);
 }
-
-includeJs("main/static/js/game_screen_autoselector.js");
-includeJs("main/static/js/drag_and_drop.js");

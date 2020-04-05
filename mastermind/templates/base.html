@@ -12,6 +12,7 @@
     {% assets "js_bundle" %}
         <script type="text/javascript" src="{{ ASSET_URL }}"></script>
     {% endassets %}
+    {% block scripts %}{% endblock %}
 </head>
 <body>
     {% block overlay %}{% endblock %}
