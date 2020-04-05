@@ -44,6 +44,12 @@
         this.button = document.querySelector("#game-apply-button");
 
         /**
+         * Get game form
+         * @type {Element}
+         */
+        this.form = document.querySelector("#game-form");
+
+        /**
          * Add event listeners to draggable nodes
          */
         this.draggableNodes.forEach(node => {
@@ -61,6 +67,16 @@
          * Add event listener to dragZone
          */
         this._applyDropZoneEvents(this.dragZone);
+
+        /**
+         * Set button event listeners
+         */
+
+        this.button.addEventListener("click", e => {
+            e.preventDefault();
+            this.button.disabled = true;
+            this.form.submit();
+        })
 
         /**
          * Audio that will be played whenever a drop occurs.

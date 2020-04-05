@@ -1,9 +1,15 @@
 from random import shuffle
 
+
 class Game_Model:
 
     def __init__(self, game_service):
-        self.reset()
+        self._sequence = None
+        self._colors = None
+        self._has_won = None
+        self._sequence = None
+        self._colors = None
+        self._has_won = None
         self._game_service = game_service
 
     @property
@@ -59,7 +65,8 @@ class Game_Model:
         return self._game_service.get_game_attempts(self._current_game)
 
     def __create_random_sequence_for_game(self, game, amount_of_colors, position_amount):
-        self._game_sequence, self._colors = self._game_service.create_game_sequence(game, amount_of_colors, position_amount)
+        self._game_sequence, self._colors = self._game_service.create_game_sequence(game, amount_of_colors,
+                                                                                    position_amount)
 
     def get_current_game_sequence(self):
         return self._game_service.get_games_sequence(self._current_game)
@@ -73,9 +80,11 @@ class Game_Model:
         no_pin = self._game_service.get_pin("None")
 
         # Get all attempt and sequence color ids
-        attempt_color_ids = [attempt_color.color.id for attempt_color in self._game_service.get_games_most_recent_attempt(self._current_game).attempt_colors]
-        sequence_color_ids = [game_color.color.id for game_color in self._game_service.get_games_sequence(self._current_game)]
-        
+        attempt_color_ids = [attempt_color.color.id for attempt_color in
+                             self._game_service.get_games_most_recent_attempt(self._current_game).attempt_colors]
+        sequence_color_ids = [game_color.color.id for game_color in
+                              self._game_service.get_games_sequence(self._current_game)]
+
         pins = []
 
         # Check for pink pins
@@ -109,7 +118,8 @@ class Game_Model:
         # If 12 attempts have already been made, return the has_won boolean
         # Also return all pins
 
-        self.has_won = None if not has_won and self._game_service.get_game_attempt_amount(self._current_game) < 12 else has_won
+        self.has_won = None if not has_won and self._game_service.get_game_attempt_amount(
+            self._current_game) < 12 else has_won
 
         return pins
 
