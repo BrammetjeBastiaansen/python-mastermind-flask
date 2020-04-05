@@ -3,7 +3,12 @@ from random import shuffle
 class Game_Model:
 
     def __init__(self, game_service):
-        self.reset()
+        self._sequence = None
+        self._colors = None
+        self._has_won = None
+        self._sequence = None
+        self._colors = None
+        self._has_won = None
         self._game_service = game_service
 
     @property

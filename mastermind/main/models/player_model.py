@@ -1,7 +1,7 @@
 class Player_Model:
 
     def __init__(self, player_service):
-        self.reset()
+        self._current_player = None
         self._player_service = player_service
 
     @property
