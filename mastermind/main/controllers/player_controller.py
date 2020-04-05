@@ -21,6 +21,7 @@ class Player_Controller(MethodView):
 
         self._player_model.set_current_player = self._player_model.get_existing_player(playerName)
 
+        # Game model will be reset here to prevent players from continuing other players' games
         self._game_model.reset()
 
         return redirect("/new-game")
