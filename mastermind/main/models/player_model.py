@@ -1,7 +1,7 @@
 class Player_Model:
 
     def __init__(self, player_service):
-        self._current_player = None
+        self.reset()
         self._player_service = player_service
 
     @property
@@ -26,3 +26,6 @@ class Player_Model:
 
     def get_played_game_amounts_by_date(self, player_id):
         return self._player_service.get_played_game_amounts_by_date(player_id)
+
+    def reset(self):
+        self._current_player = None

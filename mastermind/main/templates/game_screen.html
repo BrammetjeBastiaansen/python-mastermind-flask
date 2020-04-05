@@ -53,6 +53,9 @@
                 <h5 class="sub-title">Made by: Cees Melis and Bram Bastiaansen</h5>
             </div>
             <h4 class="fat text-center text-break font-size-1-rem mb-3">Good luck, <span class="thin font-size-1-rem">{{ player_name }}!</span></h4>
+            <div class="d-flex justify-content-center font-size-1-rem nt-1 mb-3">
+                Round: {{ 12 if attempts|length >= 12 else attempts|length + 1 }} / 12
+            </div>
             <div class="border-container">
                 <div class="border-container-content mb-2">
                     <div class="border-container-title font-bold mb-3">
