@@ -133,3 +133,4 @@ class Game_Model:
         self._sequence = None
         self._colors = None
         self._has_won = None
+        self._current_game = None
